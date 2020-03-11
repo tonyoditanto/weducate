@@ -12,6 +12,7 @@ class HighlightsViewController: UITableViewController {
     
     let sectionTitles = ["Featured", "High Demand in Near Future", "Infinite Insights", "Discover You"]
     let SECTION_FEATURED = 0
+    let SECTION_MAJORS = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +22,21 @@ class HighlightsViewController: UITableViewController {
     
     func setupTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.tableFooterView = UIView()
         
+        registerFeaturedCell()
+        registerMajorsCell()
+        
+        tableView.tableFooterView = UIView()
+    }
+    
+    func registerFeaturedCell() {
         let nib = UINib(nibName: "HighlightsFeaturedCell", bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: "HighlightsFeaturedCell")
+    }
+    
+    func registerMajorsCell() {
+        let nib = UINib(nibName: HighlightsMajorsCell.cellID, bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: HighlightsMajorsCell.cellID)
     }
     
     
@@ -81,6 +93,10 @@ class HighlightsViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HighlightsFeaturedCell", for: indexPath) as! HighlightsFeaturedCell
             return cell
         }
+        if section == SECTION_MAJORS {
+            let cell = tableView.dequeueReusableCell(withIdentifier: HighlightsMajorsCell.cellID, for: indexPath) as! HighlightsMajorsCell
+            return cell
+        }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         return cell
@@ -89,6 +105,10 @@ class HighlightsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == SECTION_FEATURED {
             return 400
+        }
+        
+        if indexPath.section == SECTION_MAJORS {
+            return 234
         }
         return 200
     }

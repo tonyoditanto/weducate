@@ -17,12 +17,23 @@ class HighlightsFeaturedCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        setupCollectionView()
+    }
+    
+    func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.indicatorStyle = .black
         
+        registerCollectionViewCell()
+        setupCollectionViewScrollDirection()
+    }
+    
+    func registerCollectionViewCell() {
         let nib = UINib(nibName: "HighlightsFeaturedCollectionViewCell", bundle: Bundle.main)
         collectionView.register(nib, forCellWithReuseIdentifier: "HighlightsFeaturedCollectionViewCell")
+    }
+    
+    func setupCollectionViewScrollDirection() {
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.scrollDirection = .horizontal
         }
