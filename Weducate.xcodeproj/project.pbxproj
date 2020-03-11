@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		92D8E0DF2418C0B700B7B13A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8E0DE2418C0B700B7B13A /* AppDelegate.swift */; };
 		92D8E0E12418C0B700B7B13A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8E0E02418C0B700B7B13A /* SceneDelegate.swift */; };
-		92D8E0E32418C0B700B7B13A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D8E0E22418C0B700B7B13A /* ViewController.swift */; };
 		92D8E0E62418C0B700B7B13A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D8E0E42418C0B700B7B13A /* Main.storyboard */; };
 		92D8E0E92418C0B700B7B13A /* Weducate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92D8E0E72418C0B700B7B13A /* Weducate.xcdatamodeld */; };
 		92D8E0EB2418C0B800B7B13A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D8E0EA2418C0B800B7B13A /* Assets.xcassets */; };
@@ -34,7 +33,6 @@
 		92D8E0DB2418C0B700B7B13A /* Weducate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weducate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D8E0DE2418C0B700B7B13A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92D8E0E02418C0B700B7B13A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		92D8E0E22418C0B700B7B13A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		92D8E0E52418C0B700B7B13A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92D8E0E82418C0B700B7B13A /* Weducate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Weducate.xcdatamodel; sourceTree = "<group>"; };
 		92D8E0EA2418C0B800B7B13A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +64,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		925AFA092418F42100C33ACC /* application */ = {
+			isa = PBXGroup;
+			children = (
+				92D8E0DE2418C0B700B7B13A /* AppDelegate.swift */,
+				92D8E0E02418C0B700B7B13A /* SceneDelegate.swift */,
+			);
+			path = application;
+			sourceTree = "<group>";
+		};
+		925AFA0A2418F43100C33ACC /* views */ = {
+			isa = PBXGroup;
+			children = (
+				92D8E0EA2418C0B800B7B13A /* Assets.xcassets */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		925AFA0B2418F43E00C33ACC /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				92D8E0EC2418C0B800B7B13A /* LaunchScreen.storyboard */,
+				92D8E0E42418C0B700B7B13A /* Main.storyboard */,
+				92D8E1032418C1A500B7B13A /* module-highlights */,
+				92D8E1062418C34A00B7B13A /* module-majors */,
+				92D8E1092418C3F200B7B13A /* module-me */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
+		925AFA0C2418F47000C33ACC /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				925AFA0D2418F4C700C33ACC /* models */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		925AFA0D2418F4C700C33ACC /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		92D8E0D22418C0B700B7B13A = {
 			isa = PBXGroup;
 			children = (
@@ -87,13 +129,9 @@
 		92D8E0DD2418C0B700B7B13A /* Weducate */ = {
 			isa = PBXGroup;
 			children = (
+				925AFA0C2418F47000C33ACC /* domain */,
 				92D8E10C2418C6B400B7B13A /* presentation */,
-				92D8E0DE2418C0B700B7B13A /* AppDelegate.swift */,
-				92D8E0E02418C0B700B7B13A /* SceneDelegate.swift */,
-				92D8E0E22418C0B700B7B13A /* ViewController.swift */,
-				92D8E0E42418C0B700B7B13A /* Main.storyboard */,
-				92D8E0EA2418C0B800B7B13A /* Assets.xcassets */,
-				92D8E0EC2418C0B800B7B13A /* LaunchScreen.storyboard */,
+				925AFA092418F42100C33ACC /* application */,
 				92D8E0EF2418C0B800B7B13A /* Info.plist */,
 				92D8E0E72418C0B700B7B13A /* Weducate.xcdatamodeld */,
 			);
@@ -136,9 +174,8 @@
 		92D8E10C2418C6B400B7B13A /* presentation */ = {
 			isa = PBXGroup;
 			children = (
-				92D8E1092418C3F200B7B13A /* module-me */,
-				92D8E1062418C34A00B7B13A /* module-majors */,
-				92D8E1032418C1A500B7B13A /* module-highlights */,
+				925AFA0B2418F43E00C33ACC /* scenes */,
+				925AFA0A2418F43100C33ACC /* views */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -247,7 +284,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92D8E0E32418C0B700B7B13A /* ViewController.swift in Sources */,
 				92D8E0DF2418C0B700B7B13A /* AppDelegate.swift in Sources */,
 				92D8E0E12418C0B700B7B13A /* SceneDelegate.swift in Sources */,
 				92D8E0E92418C0B700B7B13A /* Weducate.xcdatamodeld in Sources */,
