@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92AF7235241A31D4008ED30E /* RectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF7234241A31D4008ED30E /* RectangleButton.swift */; };
 		92BD4F22241A25EC001B3A48 /* HighlightsDiscoverYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD4F21241A25EC001B3A48 /* HighlightsDiscoverYouViewController.swift */; };
 		92BD4F24241A287E001B3A48 /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD4F23241A287E001B3A48 /* UIViewController+Child.swift */; };
 		92BF63482419F5EF00259C06 /* FeaturedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92AF7234241A31D4008ED30E /* RectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleButton.swift; sourceTree = "<group>"; };
 		92BD4F21241A25EC001B3A48 /* HighlightsDiscoverYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsDiscoverYouViewController.swift; sourceTree = "<group>"; };
 		92BD4F23241A287E001B3A48 /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
 		92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedDetailViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				92D8E0EA2418C0B800B7B13A /* Assets.xcassets */,
 				92BD4F23241A287E001B3A48 /* UIViewController+Child.swift */,
+				92AF7234241A31D4008ED30E /* RectangleButton.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92BF63482419F5EF00259C06 /* FeaturedDetailViewController.swift in Sources */,
+				92AF7235241A31D4008ED30E /* RectangleButton.swift in Sources */,
 				92D8E0DF2418C0B700B7B13A /* AppDelegate.swift in Sources */,
 				92D67C402419184E00B620FD /* HighlightsFeaturedCollectionViewCell.swift in Sources */,
 				92D67C3C241914A000B620FD /* HighlightsFeaturedCell.swift in Sources */,

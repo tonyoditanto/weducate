@@ -143,7 +143,7 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7q-uZ-3zh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7q-uZ-3zh" customClass="RectangleButton" customModule="Weducate" customModuleProvider="target">
                                 <rect key="frame" x="16" y="253" width="343" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="7lT-6K-T7v"/>
@@ -171,7 +171,7 @@
     </scenes>
     <resources>
         <namedColor name="color_soft_brown">
-            <color red="0.20000000000000001" green="0.17647058823529413" blue="0.16862745098039217" alpha="0.83999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20000000000000001" green="0.17647058823529413" blue="0.16862745098039217" alpha="0.8399999737739563" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
