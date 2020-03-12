@@ -9,7 +9,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="25d-O2-x7G">
             <objects>
-                <tabBarController id="pbr-A0-LkP" sceneMemberID="viewController">
+                <tabBarController id="pbr-A0-LkP" customClass="TabBarController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vel-tt-1p0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

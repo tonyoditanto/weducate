@@ -10,7 +10,7 @@
         <!--Highlights-->
         <scene sceneID="6zQ-ku-Lo1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DbV-G9-ZY3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DbV-G9-ZY3" customClass="NavigationController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Highlights" image="square.stack.3d.up.fill" catalog="system" id="fGB-mn-4Gf"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
