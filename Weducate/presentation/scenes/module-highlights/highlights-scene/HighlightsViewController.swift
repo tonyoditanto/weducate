@@ -7,41 +7,13 @@
 //
 
 import UIKit
-
-
 class HighlightsViewController: UITableViewController {
-    
     let sectionTitles = ["Featured", "High Demand in Near Future", "Infinite Insights", "Discover You"]
     let discoverCellID = "DiscoverCellID"
     
-    let SECTION_FEATURED = 0
-    let SECTION_MAJORS = 1
-    let SECTION_INFINITE_INSIGHTS = 2
-    let SECTION_DISCOVER_YOU = 3
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-    }
-    
-    func setupTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        registerFeaturedCell()
-        registerMajorsCell()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: discoverCellID)
-        
-        tableView.tableFooterView = UIView()
-    }
-    
-    func registerFeaturedCell() {
-        let nib = UINib(nibName: "HighlightsFeaturedCell", bundle: Bundle.main)
-        tableView.register(nib, forCellReuseIdentifier: "HighlightsFeaturedCell")
-    }
-    
-    func registerMajorsCell() {
-        let nib = UINib(nibName: HighlightsMajorsCell.cellID, bundle: Bundle.main)
-        tableView.register(nib, forCellReuseIdentifier: HighlightsMajorsCell.cellID)
     }
     
     
@@ -73,6 +45,100 @@ class HighlightsViewController: UITableViewController {
         return view
     }
     
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func makeFeaturedCell(at indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HighlightsFeaturedCell", for: indexPath) as! HighlightsFeaturedCell
+        return cell
+    }
+    
+    func makeMajorsCell(at indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: HighlightsMajorsCell.cellID, for: indexPath) as! HighlightsMajorsCell
+        return cell
+    }
+    
+    func makeInfiniteInsightsCell(at indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: discoverCellID, for: indexPath)
+        addChildVC(asChildViewController: makeInfiniteInsightsDiscoverYouViewController(), to: cell.contentView)
+        return cell
+    }
+    
+    func makeDiscoverYouCell(at indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: discoverCellID, for: indexPath)
+        addChildVC(asChildViewController: makeHighlightsDiscoverYouViewController(), to: cell.contentView)
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let section = indexPath.section
+        
+        if section == HighlightsViewControllerSection.SECTION_FEATURED {
+            return makeFeaturedCell(at: indexPath)
+        }
+        if section == HighlightsViewControllerSection.SECTION_MAJORS {
+            return makeFeaturedCell(at: indexPath)
+        }
+        if section == HighlightsViewControllerSection.SECTION_INFINITE_INSIGHTS {
+            return makeInfiniteInsightsCell(at: indexPath)
+        }
+        if section == HighlightsViewControllerSection.SECTION_DISCOVER_YOU {
+            return makeDiscoverYouCell(at: indexPath)
+        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == HighlightsViewControllerSection.SECTION_FEATURED {
+            return 400
+        }
+        if indexPath.section == HighlightsViewControllerSection.SECTION_MAJORS {
+            return 234
+        }
+        if indexPath.section == HighlightsViewControllerSection.SECTION_INFINITE_INSIGHTS {
+            return HighlightsInfiniteInsightsViewController.viewControllerHeight
+        }
+        if indexPath.section == HighlightsViewControllerSection.SECTION_DISCOVER_YOU {
+            return HighlightsDiscoverYouViewController.viewControllerHeight
+        }
+        
+        return 200
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section = indexPath.section
+        
+        if section == HighlightsViewControllerSection.SECTION_FEATURED {
+            showFeaturedDetailScene()
+        }
+    }
+}
+
+
+// MARK: - Views Helpers
+
+extension HighlightsViewController {
+    
+    func setupTableView() {
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        registerFeaturedCell()
+        registerMajorsCell()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: discoverCellID)
+        
+        tableView.tableFooterView = UIView()
+    }
+    
+    func registerFeaturedCell() {
+        let nib = UINib(nibName: "HighlightsFeaturedCell", bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: "HighlightsFeaturedCell")
+    }
+    
+    func registerMajorsCell() {
+        let nib = UINib(nibName: HighlightsMajorsCell.cellID, bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: HighlightsMajorsCell.cellID)
+    }
     
     func makeHeaderViewFont() -> UIFont {
         var font = UIFont.systemFont(ofSize: 22)
@@ -85,76 +151,41 @@ class HighlightsViewController: UITableViewController {
     func makeHeaderView(at section: Int) -> UIView {
         let frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 50)
         let view = UIView(frame: frame)
+        view.backgroundColor = .clear
         view.backgroundColor = makeTableHeaderViewColor(at: section)
         return view
     }
     
     func makeTableHeaderViewColor(at section: Int) -> UIColor {
-        return section == SECTION_DISCOVER_YOU
+        return section == HighlightsViewControllerSection.SECTION_DISCOVER_YOU
             ? UIColor(named: "color_soft_brown")!
             : .secondarySystemBackground
     }
     
     func makeTableHeaderTintColor(at section: Int) -> UIColor {
-        return section == SECTION_DISCOVER_YOU
+        return section == HighlightsViewControllerSection.SECTION_DISCOVER_YOU
             ? .white
             : .black
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let section = indexPath.section
-        
-        if section == SECTION_FEATURED {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "HighlightsFeaturedCell", for: indexPath) as! HighlightsFeaturedCell
-            return cell
-        }
-        if section == SECTION_MAJORS {
-            let cell = tableView.dequeueReusableCell(withIdentifier: HighlightsMajorsCell.cellID, for: indexPath) as! HighlightsMajorsCell
-            return cell
-        }
-        if section == SECTION_DISCOVER_YOU {
-            let cell = tableView.dequeueReusableCell(withIdentifier: discoverCellID, for: indexPath)
-            addChildVC(asChildViewController: makeHighlightsDiscoverYouViewController(), to: cell.contentView)
-            return cell
-        }
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        return cell
+    func makeInfiniteInsightsDiscoverYouViewController() -> HighlightsInfiniteInsightsViewController {
+        let storyboard = UIStoryboard(name: "Highlights", bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(identifier: "HighlightsInfiniteInsightsViewController") as! HighlightsInfiniteInsightsViewController
+        return viewController
     }
     
     func makeHighlightsDiscoverYouViewController() -> HighlightsDiscoverYouViewController {
         let storyboard = UIStoryboard(name: "Highlights", bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(identifier: "HighlightsDiscoverYouViewController") as! HighlightsDiscoverYouViewController
         return viewController
-        
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == SECTION_FEATURED {
-            return 400
-        }
-        
-        if indexPath.section == SECTION_MAJORS {
-            return 234
-        }
-        if indexPath.section == SECTION_DISCOVER_YOU {
-            return HighlightsDiscoverYouViewController.viewControllerHeight
-        }
-        
-        return 200
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let section = indexPath.section
-        
-        if section == SECTION_FEATURED {
-            showFeaturedDetailScene()
-        }
-    }
+}
+
+
+// MARK: - Routing
+
+extension HighlightsViewController {
     
     func showFeaturedDetailScene() {
         let storyboard = UIStoryboard(name: "Highlights", bundle: nil)
