@@ -12,6 +12,7 @@ import UIKit
 class HighlightsViewController: UITableViewController {
     
     let sectionTitles = ["Featured", "High Demand in Near Future", "Infinite Insights", "Discover You"]
+    let discoverCellID = "DiscoverCellID"
     
     let SECTION_FEATURED = 0
     let SECTION_MAJORS = 1
@@ -26,9 +27,9 @@ class HighlightsViewController: UITableViewController {
     
     func setupTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        
         registerFeaturedCell()
         registerMajorsCell()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: discoverCellID)
         
         tableView.tableFooterView = UIView()
     }
@@ -55,11 +56,12 @@ class HighlightsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = makeHeaderView()
+        let view = makeHeaderView(at: section)
         
         let label = UILabel()
         let title = sectionTitles[section]
         label.text = title
+        label.textColor = makeTableHeaderTintColor(at: section)
         label.font = makeHeaderViewFont()
         
         view.addSubview(label)
@@ -80,11 +82,23 @@ class HighlightsViewController: UITableViewController {
         return font
     }
     
-    func makeHeaderView() -> UIView {
+    func makeHeaderView(at section: Int) -> UIView {
         let frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 50)
         let view = UIView(frame: frame)
-        view.backgroundColor = .secondarySystemBackground
+        view.backgroundColor = makeTableHeaderViewColor(at: section)
         return view
+    }
+    
+    func makeTableHeaderViewColor(at section: Int) -> UIColor {
+        return section == SECTION_DISCOVER_YOU
+            ? UIColor(named: "color_soft_brown")!
+            : .secondarySystemBackground
+    }
+    
+    func makeTableHeaderTintColor(at section: Int) -> UIColor {
+        return section == SECTION_DISCOVER_YOU
+            ? .white
+            : .black
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -93,6 +107,7 @@ class HighlightsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = indexPath.section
+        
         if section == SECTION_FEATURED {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HighlightsFeaturedCell", for: indexPath) as! HighlightsFeaturedCell
             return cell
@@ -101,9 +116,21 @@ class HighlightsViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: HighlightsMajorsCell.cellID, for: indexPath) as! HighlightsMajorsCell
             return cell
         }
+        if section == SECTION_DISCOVER_YOU {
+            let cell = tableView.dequeueReusableCell(withIdentifier: discoverCellID, for: indexPath)
+            addChildVC(asChildViewController: makeHighlightsDiscoverYouViewController(), to: cell.contentView)
+            return cell
+        }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         return cell
+    }
+    
+    func makeHighlightsDiscoverYouViewController() -> HighlightsDiscoverYouViewController {
+        let storyboard = UIStoryboard(name: "Highlights", bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(identifier: "HighlightsDiscoverYouViewController") as! HighlightsDiscoverYouViewController
+        return viewController
+        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -115,7 +142,7 @@ class HighlightsViewController: UITableViewController {
             return 234
         }
         if indexPath.section == SECTION_DISCOVER_YOU {
-            return 368
+            return HighlightsDiscoverYouViewController.viewControllerHeight
         }
         
         return 200

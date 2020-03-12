@@ -9,6 +9,7 @@
 import UIKit
 
 class HighlightsDiscoverYouViewController: UIViewController {
+    static let viewControllerHeight: CGFloat = 368
 
     override func viewDidLoad() {
         super.viewDidLoad()
