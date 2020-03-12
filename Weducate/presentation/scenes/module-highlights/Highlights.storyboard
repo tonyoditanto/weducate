@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DbV-G9-ZY3">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +15,7 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="fWY-3m-dkF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="QVV-YD-5gY">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -34,15 +35,15 @@
             <objects>
                 <tableViewController id="tIN-Ax-tGc" customClass="HighlightsViewController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rAf-gu-qq5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="432" id="3hH-SA-v7q">
-                                <rect key="frame" x="0.0" y="28" width="414" height="432"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="432"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3hH-SA-v7q" id="SEv-bc-ik6">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="432"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="432"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -64,29 +65,29 @@
             <objects>
                 <viewController storyboardIdentifier="FeaturedDetailViewController" id="g23-QX-BbX" customClass="FeaturedDetailViewController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ObV-OT-78R">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pGa-Ck-DUl">
-                                <rect key="frame" x="16" y="60" width="382" height="200"/>
+                                <rect key="frame" x="16" y="16" width="343" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="H4a-BU-5hV"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMh-Uo-0oz">
-                                <rect key="frame" x="16" y="268" width="382" height="34"/>
+                                <rect key="frame" x="16" y="224" width="343" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MajorNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fte-9w-WKH">
-                                <rect key="frame" x="16" y="302" width="382" height="21"/>
+                                <rect key="frame" x="16" y="258" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CZ3-Ms-Bbf">
-                                <rect key="frame" x="16" y="339" width="382" height="507"/>
+                                <rect key="frame" x="16" y="295" width="343" height="356"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -124,5 +125,53 @@
             </objects>
             <point key="canvasLocation" x="1921.7391304347827" y="-291.29464285714283"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="v8c-Yd-ykk">
+            <objects>
+                <viewController id="o9K-0r-g0f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HdC-UT-nIV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="368"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xqq-nw-w4b">
+                                <rect key="frame" x="16" y="20" width="343" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="225" id="aVz-px-5l6"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7q-uZ-3zh">
+                                <rect key="frame" x="16" y="253" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7lT-6K-T7v"/>
+                                </constraints>
+                                <state key="normal" title="Start Assesment Test"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="color_soft_brown"/>
+                        <constraints>
+                            <constraint firstItem="o7q-uZ-3zh" firstAttribute="top" secondItem="Xqq-nw-w4b" secondAttribute="bottom" constant="8" id="6cY-v7-wCr"/>
+                            <constraint firstItem="Xqq-nw-w4b" firstAttribute="top" secondItem="VaZ-tA-Fc4" secondAttribute="top" constant="20" id="SfW-uF-hx1"/>
+                            <constraint firstItem="VaZ-tA-Fc4" firstAttribute="trailing" secondItem="Xqq-nw-w4b" secondAttribute="trailing" constant="16" id="TUk-Ub-7p7"/>
+                            <constraint firstItem="Xqq-nw-w4b" firstAttribute="leading" secondItem="VaZ-tA-Fc4" secondAttribute="leading" constant="16" id="UhS-Pl-9jB"/>
+                            <constraint firstItem="VaZ-tA-Fc4" firstAttribute="trailing" secondItem="o7q-uZ-3zh" secondAttribute="trailing" constant="16" id="gcy-6Y-8aq"/>
+                            <constraint firstItem="o7q-uZ-3zh" firstAttribute="leading" secondItem="VaZ-tA-Fc4" secondAttribute="leading" constant="16" id="ie2-kI-39y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VaZ-tA-Fc4"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="368"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VYn-LE-oga" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117.5999999999999" y="401.19940029985008"/>
+        </scene>
     </scenes>
+    <resources>
+        <namedColor name="color_soft_brown">
+            <color red="0.20000000000000001" green="0.17647058823529413" blue="0.16862745098039217" alpha="0.83999999999999997" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

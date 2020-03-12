@@ -128,12 +128,19 @@
 			path = models;
 			sourceTree = "<group>";
 		};
-		92BF63442419F0E100259C06 /* featured-detail */ = {
+		92BD4F20241A1F6C001B3A48 /* discover-you */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "discover-you";
+			sourceTree = "<group>";
+		};
+		92BF63442419F0E100259C06 /* featured-detail-scene */ = {
 			isa = PBXGroup;
 			children = (
 				92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */,
 			);
-			path = "featured-detail";
+			path = "featured-detail-scene";
 			sourceTree = "<group>";
 		};
 		92D67C4224191BE500B620FD /* cells */ = {
@@ -141,6 +148,7 @@
 			children = (
 				92D67C4424191C7F00B620FD /* featured */,
 				92D67C4524191CAB00B620FD /* high-demand-majors */,
+				92BD4F20241A1F6C001B3A48 /* discover-you */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -220,7 +228,7 @@
 			children = (
 				92D8E1042418C1F100B7B13A /* Highlights.storyboard */,
 				92D67C4324191BED00B620FD /* highlights-scene */,
-				92BF63442419F0E100259C06 /* featured-detail */,
+				92BF63442419F0E100259C06 /* featured-detail-scene */,
 			);
 			path = "module-highlights";
 			sourceTree = "<group>";

@@ -10,17 +10,15 @@ import UIKit
 
 
 class HighlightsViewController: UITableViewController {
+    
     let sectionTitles = ["Featured", "High Demand in Near Future", "Infinite Insights", "Discover You"]
+    
     let SECTION_FEATURED = 0
     let SECTION_MAJORS = 1
+    let SECTION_INFINITE_INSIGHTS = 2
+    let SECTION_DISCOVER_YOU = 3
     
-    
-    
-    
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -116,6 +114,10 @@ class HighlightsViewController: UITableViewController {
         if indexPath.section == SECTION_MAJORS {
             return 234
         }
+        if indexPath.section == SECTION_DISCOVER_YOU {
+            return 368
+        }
+        
         return 200
     }
     
