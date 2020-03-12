@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92BD4F22241A25EC001B3A48 /* HighlightsDiscoverYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD4F21241A25EC001B3A48 /* HighlightsDiscoverYouViewController.swift */; };
 		92BF63482419F5EF00259C06 /* FeaturedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */; };
 		92D67C31241902A300B620FD /* HighlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D67C30241902A300B620FD /* HighlightsViewController.swift */; };
 		92D67C3C241914A000B620FD /* HighlightsFeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D67C3A241914A000B620FD /* HighlightsFeaturedCell.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92BD4F21241A25EC001B3A48 /* HighlightsDiscoverYouViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsDiscoverYouViewController.swift; sourceTree = "<group>"; };
 		92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedDetailViewController.swift; sourceTree = "<group>"; };
 		92D67C30241902A300B620FD /* HighlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsViewController.swift; sourceTree = "<group>"; };
 		92D67C3A241914A000B620FD /* HighlightsFeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsFeaturedCell.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				92D67C30241902A300B620FD /* HighlightsViewController.swift */,
+				92BD4F21241A25EC001B3A48 /* HighlightsDiscoverYouViewController.swift */,
 				92D67C4224191BE500B620FD /* cells */,
 			);
 			path = "highlights-scene";
@@ -370,6 +373,7 @@
 				92D8E0DF2418C0B700B7B13A /* AppDelegate.swift in Sources */,
 				92D67C402419184E00B620FD /* HighlightsFeaturedCollectionViewCell.swift in Sources */,
 				92D67C3C241914A000B620FD /* HighlightsFeaturedCell.swift in Sources */,
+				92BD4F22241A25EC001B3A48 /* HighlightsDiscoverYouViewController.swift in Sources */,
 				92D8E0E12418C0B700B7B13A /* SceneDelegate.swift in Sources */,
 				92D67C4C24191ED700B620FD /* HighlightsMajorsCell.swift in Sources */,
 				92D67C4824191D0300B620FD /* HighlightsMajorCollectionViewCell.swift in Sources */,

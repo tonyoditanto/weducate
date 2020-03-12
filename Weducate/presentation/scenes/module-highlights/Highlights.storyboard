@@ -125,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="1921.7391304347827" y="-291.29464285714283"/>
         </scene>
-        <!--View Controller-->
+        <!--Highlights Discover You View Controller-->
         <scene sceneID="v8c-Yd-ykk">
             <objects>
-                <viewController id="o9K-0r-g0f" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HighlightsDiscoverYouViewController" id="o9K-0r-g0f" customClass="HighlightsDiscoverYouViewController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HdC-UT-nIV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="368"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
