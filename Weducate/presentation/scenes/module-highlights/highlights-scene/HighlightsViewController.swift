@@ -14,6 +14,9 @@ class HighlightsViewController: UITableViewController {
     let SECTION_FEATURED = 0
     let SECTION_MAJORS = 1
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
