@@ -8,15 +8,14 @@
 
 import UIKit
 
+
 class HighlightsViewController: UITableViewController {
-    
     let sectionTitles = ["Featured", "High Demand in Near Future", "Infinite Insights", "Discover You"]
     let SECTION_FEATURED = 0
     let SECTION_MAJORS = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupTableView()
     }
     
@@ -67,6 +66,7 @@ class HighlightsViewController: UITableViewController {
         return view
     }
     
+    
     func makeHeaderViewFont() -> UIFont {
         var font = UIFont.systemFont(ofSize: 22)
         if let newDescriptor = font.fontDescriptor.withSymbolicTraits(.traitBold) {
@@ -88,7 +88,6 @@ class HighlightsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = indexPath.section
-        
         if section == SECTION_FEATURED {
             let cell = tableView.dequeueReusableCell(withIdentifier: "HighlightsFeaturedCell", for: indexPath) as! HighlightsFeaturedCell
             return cell
@@ -113,5 +112,20 @@ class HighlightsViewController: UITableViewController {
         return 200
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let section = indexPath.section
+        
+        if section == SECTION_FEATURED {
+            showFeaturedDetailScene()
+        }
+    }
+    
+    func showFeaturedDetailScene() {
+        let storyboard = UIStoryboard(name: "Highlights", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "FeaturedDetailViewController") as! FeaturedDetailViewController
+        viewController.featuredImage = #imageLiteral(resourceName: "img_featured")
+        viewController.titleText = "fasdfadsfa"
+        navigationController?.pushViewController(viewController, animated: true)
+    }
     
 }

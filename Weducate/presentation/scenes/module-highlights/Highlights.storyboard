@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -57,6 +58,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WnF-jw-CH3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1118.840579710145" y="-291.29464285714283"/>
+        </scene>
+        <!--Featured Detail View Controller-->
+        <scene sceneID="vjV-iI-0OO">
+            <objects>
+                <viewController storyboardIdentifier="FeaturedDetailViewController" id="g23-QX-BbX" customClass="FeaturedDetailViewController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ObV-OT-78R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pGa-Ck-DUl">
+                                <rect key="frame" x="16" y="60" width="382" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="H4a-BU-5hV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMh-Uo-0oz">
+                                <rect key="frame" x="16" y="268" width="382" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MajorNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fte-9w-WKH">
+                                <rect key="frame" x="16" y="302" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CZ3-Ms-Bbf">
+                                <rect key="frame" x="16" y="339" width="382" height="507"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qo1-fQ-Fpw" firstAttribute="trailing" secondItem="CZ3-Ms-Bbf" secondAttribute="trailing" constant="16" id="3NA-1Y-3GY"/>
+                            <constraint firstItem="sMh-Uo-0oz" firstAttribute="top" secondItem="pGa-Ck-DUl" secondAttribute="bottom" constant="8" id="4U7-BY-wGq"/>
+                            <constraint firstItem="pGa-Ck-DUl" firstAttribute="leading" secondItem="qo1-fQ-Fpw" secondAttribute="leading" constant="16" id="8UQ-2j-eGy"/>
+                            <constraint firstItem="CZ3-Ms-Bbf" firstAttribute="leading" secondItem="qo1-fQ-Fpw" secondAttribute="leading" constant="16" id="JHb-54-QK1"/>
+                            <constraint firstItem="qo1-fQ-Fpw" firstAttribute="trailing" secondItem="sMh-Uo-0oz" secondAttribute="trailing" constant="16" id="Jht-SQ-0zZ"/>
+                            <constraint firstItem="qo1-fQ-Fpw" firstAttribute="trailing" secondItem="fte-9w-WKH" secondAttribute="trailing" constant="16" id="ZAo-r4-ykc"/>
+                            <constraint firstItem="fte-9w-WKH" firstAttribute="leading" secondItem="qo1-fQ-Fpw" secondAttribute="leading" constant="16" id="dn2-AO-har"/>
+                            <constraint firstItem="sMh-Uo-0oz" firstAttribute="leading" secondItem="qo1-fQ-Fpw" secondAttribute="leading" constant="16" id="gBq-4F-20Q"/>
+                            <constraint firstItem="fte-9w-WKH" firstAttribute="top" secondItem="sMh-Uo-0oz" secondAttribute="bottom" id="txV-lb-jAF"/>
+                            <constraint firstItem="qo1-fQ-Fpw" firstAttribute="trailing" secondItem="pGa-Ck-DUl" secondAttribute="trailing" constant="16" id="vhC-FK-j0o"/>
+                            <constraint firstItem="pGa-Ck-DUl" firstAttribute="top" secondItem="qo1-fQ-Fpw" secondAttribute="top" constant="16" id="xO7-qs-q2r"/>
+                            <constraint firstItem="CZ3-Ms-Bbf" firstAttribute="top" secondItem="fte-9w-WKH" secondAttribute="bottom" constant="16" id="xXn-LZ-pQF"/>
+                            <constraint firstItem="qo1-fQ-Fpw" firstAttribute="bottom" secondItem="CZ3-Ms-Bbf" secondAttribute="bottom" constant="16" id="zlw-7e-s4S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qo1-fQ-Fpw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wZo-Do-PSV"/>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="CZ3-Ms-Bbf" id="8bW-0F-Mk0"/>
+                        <outlet property="featuredImageView" destination="pGa-Ck-DUl" id="Uqk-yV-T61"/>
+                        <outlet property="majorNameLabel" destination="fte-9w-WKH" id="b92-Vc-pL6"/>
+                        <outlet property="titleLabel" destination="sMh-Uo-0oz" id="2c5-6Y-bjZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0sp-Jh-kLr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1921.7391304347827" y="-291.29464285714283"/>
         </scene>
     </scenes>
 </document>
