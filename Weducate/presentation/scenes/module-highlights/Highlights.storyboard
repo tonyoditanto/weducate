@@ -3,17 +3,17 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 1-->
+        <!--Highlights-->
         <scene sceneID="6zQ-ku-Lo1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DbV-G9-ZY3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="fWY-3m-dkF"/>
+                    <tabBarItem key="tabBarItem" title="Highlights" image="square.stack.3d.up.fill" catalog="system" id="fGB-mn-4Gf"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="QVV-YD-5gY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -46,6 +46,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="432"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="g23-QX-BbX" kind="show" identifier="SEGUE_FeaturedDetailViewController" id="gOV-bB-hYZ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -68,26 +71,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pGa-Ck-DUl">
-                                <rect key="frame" x="16" y="16" width="343" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_featured" translatesAutoresizingMaskIntoConstraints="NO" id="pGa-Ck-DUl">
+                                <rect key="frame" x="16" y="60" width="343" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="H4a-BU-5hV"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMh-Uo-0oz">
-                                <rect key="frame" x="16" y="224" width="343" height="34"/>
+                                <rect key="frame" x="16" y="268" width="343" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MajorNameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fte-9w-WKH">
-                                <rect key="frame" x="16" y="258" width="343" height="21"/>
+                                <rect key="frame" x="16" y="302" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CZ3-Ms-Bbf">
-                                <rect key="frame" x="16" y="295" width="343" height="356"/>
+                                <rect key="frame" x="16" y="339" width="343" height="263"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -113,7 +116,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qo1-fQ-Fpw"/>
                     </view>
-                    <navigationItem key="navigationItem" id="wZo-Do-PSV"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="wZo-Do-PSV"/>
                     <connections>
                         <outlet property="descriptionTextView" destination="CZ3-Ms-Bbf" id="8bW-0F-Mk0"/>
                         <outlet property="featuredImageView" destination="pGa-Ck-DUl" id="Uqk-yV-T61"/>
@@ -125,91 +128,9 @@
             </objects>
             <point key="canvasLocation" x="1921.7391304347827" y="-291.29464285714283"/>
         </scene>
-        <!--Highlights Discover You View Controller-->
-        <scene sceneID="gxQ-eq-vZd">
-            <objects>
-                <viewController storyboardIdentifier="HighlightsDiscoverYouViewController" id="MIK-pE-SCJ" customClass="HighlightsDiscoverYouViewController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Xe7-AL-yBF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="368"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hIh-cr-yDH">
-                                <rect key="frame" x="16" y="20" width="343" height="225"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="225" id="jf2-ai-8dC"/>
-                                </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhV-55-e7f" customClass="RectangleButton" customModule="Weducate" customModuleProvider="target">
-                                <rect key="frame" x="16" y="253" width="343" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="wPI-wl-Pbd"/>
-                                </constraints>
-                                <state key="normal" title="Start Assesment Test"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" name="color_soft_brown"/>
-                        <constraints>
-                            <constraint firstItem="uhV-55-e7f" firstAttribute="top" secondItem="hIh-cr-yDH" secondAttribute="bottom" constant="8" id="12u-ff-YgJ"/>
-                            <constraint firstItem="lDI-PE-LLy" firstAttribute="trailing" secondItem="uhV-55-e7f" secondAttribute="trailing" constant="16" id="P6j-aX-yjl"/>
-                            <constraint firstItem="hIh-cr-yDH" firstAttribute="top" secondItem="lDI-PE-LLy" secondAttribute="top" constant="20" id="Vd4-rv-5cv"/>
-                            <constraint firstItem="lDI-PE-LLy" firstAttribute="trailing" secondItem="hIh-cr-yDH" secondAttribute="trailing" constant="16" id="XuI-IA-vAK"/>
-                            <constraint firstItem="hIh-cr-yDH" firstAttribute="leading" secondItem="lDI-PE-LLy" secondAttribute="leading" constant="16" id="mRn-o1-CGK"/>
-                            <constraint firstItem="uhV-55-e7f" firstAttribute="leading" secondItem="lDI-PE-LLy" secondAttribute="leading" constant="16" id="s69-1D-mMF"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="lDI-PE-LLy"/>
-                    </view>
-                    <size key="freeformSize" width="375" height="368"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nNK-Vf-huL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1118" y="617"/>
-        </scene>
-        <!--Highlights Infinite Insights View Controller-->
-        <scene sceneID="upg-ta-i0F">
-            <objects>
-                <viewController storyboardIdentifier="HighlightsInfiniteInsightsViewController" id="G3e-T0-wBx" customClass="HighlightsInfiniteInsightsViewController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KXD-wZ-VrF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DAG-WQ-Yt1">
-                                <rect key="frame" x="16" y="20" width="343" height="176"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cQ3-Hv-hAM">
-                                    <size key="itemSize" width="249" height="158"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="tjK-JI-LXa" firstAttribute="bottom" secondItem="DAG-WQ-Yt1" secondAttribute="bottom" constant="20" id="BMR-a1-bfK"/>
-                            <constraint firstItem="tjK-JI-LXa" firstAttribute="trailing" secondItem="DAG-WQ-Yt1" secondAttribute="trailing" constant="16" id="QQe-Tf-9f0"/>
-                            <constraint firstItem="DAG-WQ-Yt1" firstAttribute="leading" secondItem="tjK-JI-LXa" secondAttribute="leading" constant="16" id="Scl-dG-ygW"/>
-                            <constraint firstItem="DAG-WQ-Yt1" firstAttribute="top" secondItem="tjK-JI-LXa" secondAttribute="top" constant="20" id="Syz-RQ-Yud"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="tjK-JI-LXa"/>
-                    </view>
-                    <size key="freeformSize" width="375" height="216"/>
-                    <connections>
-                        <outlet property="collectionView" destination="DAG-WQ-Yt1" id="YXf-rP-niP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="83d-lZ-Hnc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1117.5999999999999" y="263.56821589205401"/>
-        </scene>
     </scenes>
     <resources>
-        <namedColor name="color_soft_brown">
-            <color red="0.20000000000000001" green="0.17647058823529413" blue="0.16862745098039217" alpha="0.8399999737739563" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="img_featured" width="355" height="271"/>
+        <image name="square.stack.3d.up.fill" catalog="system" width="64" height="62"/>
     </resources>
 </document>

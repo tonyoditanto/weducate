@@ -1,5 +1,5 @@
 //
-//  HighlightsInfiniteInsightsViewController.swift
+//  InfiniteInsightsCell.swift
 //  Weducate
 //
 //  Created by Arifin Firdaus on 12/03/20.
@@ -8,28 +8,31 @@
 
 import UIKit
 
-class HighlightsInfiniteInsightsViewController: UIViewController {
-    static let viewControllerHeight: CGFloat = 216
+class InfiniteInsightsCell: UITableViewCell {
+    static let cellID = "InfiniteInsightsCell"
+    static let cellHeight: CGFloat = 224
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .red
-        
-        registerCell()
-        setupCollectionViewCell()
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        registerInfiniteInsightsCollectionViewCell()
+        setupCollectionView()
         setupCollectionViewScrollDirection()
     }
     
-    func registerCell() {
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+    
+    func registerInfiniteInsightsCollectionViewCell() {
         let nib = UINib(nibName: InfiniteInsightsCollectionViewCell.cellID, bundle: Bundle.main)
         collectionView.register(nib, forCellWithReuseIdentifier: InfiniteInsightsCollectionViewCell.cellID)
     }
     
-    func setupCollectionViewCell() {
-        collectionView.dataSource = self
+    func setupCollectionView() {
         collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
     func setupCollectionViewScrollDirection() {
@@ -37,36 +40,34 @@ class HighlightsInfiniteInsightsViewController: UIViewController {
             layout.scrollDirection = .horizontal
         }
     }
-
     
 }
 
 
 // MARK: - UICollectionViewDataSource
 
-extension HighlightsInfiniteInsightsViewController: UICollectionViewDataSource {
+extension InfiniteInsightsCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: InfiniteInsightsCollectionViewCell.cellID, for: indexPath) as! InfiniteInsightsCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: InfiniteInsightsCollectionViewCell.cellID, for: indexPath)
         return cell
     }
     
 }
 
-
 // MARK: - UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 
-extension HighlightsInfiniteInsightsViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension InfiniteInsightsCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = CGSize(width: InfiniteInsightsCollectionViewCell.cellWidth, height: InfiniteInsightsCollectionViewCell.cellHeight)
-        return size
+        return CGSize(width: InfiniteInsightsCollectionViewCell.cellWidth, height: InfiniteInsightsCollectionViewCell.cellHeight)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
     
 }
-
-
-

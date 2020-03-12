@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol HighlightsFeaturedCellDelegate {
+    func highlightsFeaturedCell(_ highlightsFeaturedCell: HighlightsFeaturedCell, collectionView: UICollectionView, didSelect at: IndexPath)
+}
+
 class HighlightsFeaturedCell: UITableViewCell {
     static let cellID = "HighlightsFeaturedCell"
     static let cellHeight: CGFloat = 432
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var delegate: HighlightsFeaturedCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -72,5 +78,10 @@ extension HighlightsFeaturedCell: UICollectionViewDelegate, UICollectionViewDele
         
         return CGSize(width: width, height: height)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.highlightsFeaturedCell(self, collectionView: collectionView, didSelect: indexPath)
+    }
 }
+
 

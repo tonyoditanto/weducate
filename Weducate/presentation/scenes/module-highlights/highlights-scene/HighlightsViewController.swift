@@ -7,9 +7,9 @@
 //
 
 import UIKit
+
 class HighlightsViewController: UITableViewController {
     let sectionTitles = ["Featured", "High Demand in Near Future", "Infinite Insights", "Discover You"]
-    let discoverCellID = "DiscoverCellID"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class HighlightsViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return sectionTitles.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,21 +28,21 @@ class HighlightsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = makeHeaderView(at: section)
+        let headerView = makeHeaderView(at: section)
+        let headerViewLabel = makeHeaderViewLabel(at: section)
+        headerView.addSubview(headerViewLabel)
+        return headerView
+    }
+    
+    func makeHeaderViewLabel(at section: Int) -> UILabel {
+        let frame = CGRect(x: 16, y: 8, width: tableView.frame.width, height: 30)
+        let label = UILabel(frame: frame)
+        label.text = sectionTitles[section]
         
-        let label = UILabel()
-        let title = sectionTitles[section]
-        label.text = title
         label.textColor = makeTableHeaderTintColor(at: section)
         label.font = makeHeaderViewFont()
         
-        view.addSubview(label)
-        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
-        label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
-        label.sizeToFit()
-        
-        return view
+        return label
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -76,7 +76,7 @@ class HighlightsViewController: UITableViewController {
             return 234
         }
         if indexPath.section == HighlightsViewControllerSection.SECTION_INFINITE_INSIGHTS {
-            return HighlightsInfiniteInsightsViewController.viewControllerHeight
+            return InfiniteInsightsCell.cellHeight
         }
         if indexPath.section == HighlightsViewControllerSection.SECTION_DISCOVER_YOU {
             return DiscoverYouViewCell.cellHeight
@@ -101,6 +101,7 @@ extension HighlightsViewController {
     
     func makeFeaturedCell(at indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HighlightsFeaturedCell", for: indexPath) as! HighlightsFeaturedCell
+        cell.delegate = self
         return cell
     }
     
@@ -110,8 +111,7 @@ extension HighlightsViewController {
     }
     
     func makeInfiniteInsightsCell(at indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: discoverCellID, for: indexPath)
-        addChildVC(asChildViewController: makeInfiniteInsightsDiscoverYouViewController(), to: cell.contentView)
+        let cell = tableView.dequeueReusableCell(withIdentifier: InfiniteInsightsCell.cellID, for: indexPath) as! InfiniteInsightsCell
         return cell
     }
     
@@ -121,12 +121,10 @@ extension HighlightsViewController {
     }
     
     func setupTableView() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         registerFeaturedCell()
         registerMajorsCell()
         registerDiscoverYouCell()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: discoverCellID)
-        
+        registerInfiniteInsightsCell()
         tableView.tableFooterView = UIView()
     }
     
@@ -143,6 +141,11 @@ extension HighlightsViewController {
     func registerMajorsCell() {
         let nib = UINib(nibName: HighlightsMajorsCell.cellID, bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: HighlightsMajorsCell.cellID)
+    }
+    
+    func registerInfiniteInsightsCell() {
+        let nib = UINib(nibName: InfiniteInsightsCell.cellID, bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: InfiniteInsightsCell.cellID)
     }
     
     func makeHeaderViewFont() -> UIFont {
@@ -164,7 +167,7 @@ extension HighlightsViewController {
     func makeTableHeaderViewColor(at section: Int) -> UIColor {
         return section == HighlightsViewControllerSection.SECTION_DISCOVER_YOU
             ? UIColor(named: "color_soft_brown")!
-            : .secondarySystemBackground
+            : .white
     }
     
     func makeTableHeaderTintColor(at section: Int) -> UIColor {
@@ -173,12 +176,6 @@ extension HighlightsViewController {
             : .black
     }
     
-    func makeInfiniteInsightsDiscoverYouViewController() -> HighlightsInfiniteInsightsViewController {
-        let storyboard = UIStoryboard(name: "Highlights", bundle: Bundle.main)
-        let viewController = storyboard.instantiateViewController(identifier: "HighlightsInfiniteInsightsViewController") as! HighlightsInfiniteInsightsViewController
-        return viewController
-    }
-
     
 }
 
@@ -191,8 +188,20 @@ extension HighlightsViewController {
         let storyboard = UIStoryboard(name: "Highlights", bundle: nil)
         let viewController = storyboard.instantiateViewController(identifier: "FeaturedDetailViewController") as! FeaturedDetailViewController
         viewController.featuredImage = #imageLiteral(resourceName: "img_featured")
-        viewController.titleText = "fasdfadsfa"
+        viewController.titleText = "World Class Designer is Here!"
+        viewController.majorNameText = "Interior Design"
         navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+}
+
+
+// MARK: - HighlightsFeaturedCellDelegate
+
+extension HighlightsViewController: HighlightsFeaturedCellDelegate {
+    
+    func highlightsFeaturedCell(_ highlightsFeaturedCell: HighlightsFeaturedCell, collectionView: UICollectionView, didSelect at: IndexPath) {
+        showFeaturedDetailScene()
     }
     
 }

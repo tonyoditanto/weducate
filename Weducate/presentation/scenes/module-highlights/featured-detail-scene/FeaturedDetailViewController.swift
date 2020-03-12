@@ -15,12 +15,16 @@ class FeaturedDetailViewController: UIViewController {
     @IBOutlet weak private var descriptionTextView: UITextView!
     
     var titleText: String?
+    var majorNameText: String?
     var featuredImage: UIImage?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         featuredImageView.image = featuredImage
         titleLabel.text = titleText
+        majorNameLabel.text = majorNameText
+        
+        title = titleText
     }
 
 

@@ -10,10 +10,11 @@
 		920B3F9C241A498B00E7E798 /* HighlightsViewControllerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920B3F9B241A498B00E7E798 /* HighlightsViewControllerSection.swift */; };
 		920B3FA0241A4C9700E7E798 /* DiscoverYouViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920B3F9E241A4C9700E7E798 /* DiscoverYouViewCell.swift */; };
 		920B3FA1241A4C9700E7E798 /* DiscoverYouViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920B3F9F241A4C9700E7E798 /* DiscoverYouViewCell.xib */; };
+		921C6FAB241A82B4003A1A81 /* InfiniteInsightsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C6FA9241A82B4003A1A81 /* InfiniteInsightsCell.swift */; };
+		921C6FAC241A82B4003A1A81 /* InfiniteInsightsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 921C6FAA241A82B4003A1A81 /* InfiniteInsightsCell.xib */; };
 		92AF7235241A31D4008ED30E /* RectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF7234241A31D4008ED30E /* RectangleButton.swift */; };
 		92AF7238241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF7236241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift */; };
 		92AF7239241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92AF7237241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib */; };
-		92AF723B241A395E008ED30E /* HighlightsInfiniteInsightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF723A241A395E008ED30E /* HighlightsInfiniteInsightsViewController.swift */; };
 		92BD4F24241A287E001B3A48 /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD4F23241A287E001B3A48 /* UIViewController+Child.swift */; };
 		92BF63482419F5EF00259C06 /* FeaturedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */; };
 		92D67C31241902A300B620FD /* HighlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D67C30241902A300B620FD /* HighlightsViewController.swift */; };
@@ -51,10 +52,11 @@
 		920B3F9B241A498B00E7E798 /* HighlightsViewControllerSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsViewControllerSection.swift; sourceTree = "<group>"; };
 		920B3F9E241A4C9700E7E798 /* DiscoverYouViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverYouViewCell.swift; sourceTree = "<group>"; };
 		920B3F9F241A4C9700E7E798 /* DiscoverYouViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverYouViewCell.xib; sourceTree = "<group>"; };
+		921C6FA9241A82B4003A1A81 /* InfiniteInsightsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteInsightsCell.swift; sourceTree = "<group>"; };
+		921C6FAA241A82B4003A1A81 /* InfiniteInsightsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfiniteInsightsCell.xib; sourceTree = "<group>"; };
 		92AF7234241A31D4008ED30E /* RectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleButton.swift; sourceTree = "<group>"; };
 		92AF7236241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteInsightsCollectionViewCell.swift; sourceTree = "<group>"; };
 		92AF7237241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfiniteInsightsCollectionViewCell.xib; sourceTree = "<group>"; };
-		92AF723A241A395E008ED30E /* HighlightsInfiniteInsightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsInfiniteInsightsViewController.swift; sourceTree = "<group>"; };
 		92BD4F23241A287E001B3A48 /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
 		92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedDetailViewController.swift; sourceTree = "<group>"; };
 		92D67C30241902A300B620FD /* HighlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,8 @@
 		92BD4F20241A1F6C001B3A48 /* infinite-insights */ = {
 			isa = PBXGroup;
 			children = (
+				921C6FA9241A82B4003A1A81 /* InfiniteInsightsCell.swift */,
+				921C6FAA241A82B4003A1A81 /* InfiniteInsightsCell.xib */,
 				92AF7236241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift */,
 				92AF7237241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib */,
 			);
@@ -187,7 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				92D67C30241902A300B620FD /* HighlightsViewController.swift */,
-				92AF723A241A395E008ED30E /* HighlightsInfiniteInsightsViewController.swift */,
 				92D67C4224191BE500B620FD /* cells */,
 				920B3F9B241A498B00E7E798 /* HighlightsViewControllerSection.swift */,
 			);
@@ -381,6 +384,7 @@
 				92D67C3D241914A000B620FD /* HighlightsFeaturedCell.xib in Resources */,
 				92D67C4D24191ED700B620FD /* HighlightsMajorsCell.xib in Resources */,
 				92D8E0EB2418C0B800B7B13A /* Assets.xcassets in Resources */,
+				921C6FAC241A82B4003A1A81 /* InfiniteInsightsCell.xib in Resources */,
 				92D8E0E62418C0B700B7B13A /* Main.storyboard in Resources */,
 				92D8E1052418C1F100B7B13A /* Highlights.storyboard in Resources */,
 			);
@@ -402,8 +406,8 @@
 			files = (
 				92BF63482419F5EF00259C06 /* FeaturedDetailViewController.swift in Sources */,
 				92AF7235241A31D4008ED30E /* RectangleButton.swift in Sources */,
-				92AF723B241A395E008ED30E /* HighlightsInfiniteInsightsViewController.swift in Sources */,
 				92D8E0DF2418C0B700B7B13A /* AppDelegate.swift in Sources */,
+				921C6FAB241A82B4003A1A81 /* InfiniteInsightsCell.swift in Sources */,
 				92D67C402419184E00B620FD /* HighlightsFeaturedCollectionViewCell.swift in Sources */,
 				92AF7238241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift in Sources */,
 				92D67C3C241914A000B620FD /* HighlightsFeaturedCell.swift in Sources */,
