@@ -23,7 +23,7 @@ class HighlightsMajorsCell: UITableViewCell {
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+        collectionView.isPagingEnabled = true
         registerCollectionViewCell()
         setupCollectionViewScrollDirection()
     }

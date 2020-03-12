@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="293" height="78"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aOO-5p-ORf">
-                        <rect key="frame" x="20" y="15" width="48" height="48"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aOO-5p-ORf">
+                        <rect key="frame" x="20" y="15.5" width="48" height="47"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="48" id="5Le-Fh-hCd"/>
                             <constraint firstAttribute="width" constant="48" id="cY3-Dn-F0T"/>
@@ -42,7 +42,6 @@
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="aOO-5p-ORf" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="0IO-Y2-u0l"/>
                 <constraint firstItem="eSh-tZ-rFb" firstAttribute="leading" secondItem="aOO-5p-ORf" secondAttribute="trailing" constant="10" id="RAy-FD-hqV"/>
                 <constraint firstItem="eSh-tZ-rFb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="TNR-Ws-JYa"/>
                 <constraint firstItem="D0P-Ge-beb" firstAttribute="leading" secondItem="eSh-tZ-rFb" secondAttribute="leading" id="Z9W-nM-7zB"/>
@@ -50,9 +49,13 @@
                 <constraint firstItem="aOO-5p-ORf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="i9f-2e-5Vj"/>
                 <constraint firstAttribute="trailing" secondItem="D0P-Ge-beb" secondAttribute="trailing" constant="20" id="kPM-2y-OJA"/>
                 <constraint firstItem="D0P-Ge-beb" firstAttribute="top" secondItem="eSh-tZ-rFb" secondAttribute="bottom" id="olA-CE-u3O"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="aOO-5p-ORf" secondAttribute="top" constant="29" id="xaR-tq-q9l"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <point key="canvasLocation" x="138.40579710144928" y="152.67857142857142"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="pencil.circle.fill" catalog="system" width="64" height="60"/>
+    </resources>
 </document>
