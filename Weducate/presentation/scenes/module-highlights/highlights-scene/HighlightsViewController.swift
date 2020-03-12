@@ -49,28 +49,6 @@ class HighlightsViewController: UITableViewController {
         return 50
     }
     
-    func makeFeaturedCell(at indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HighlightsFeaturedCell", for: indexPath) as! HighlightsFeaturedCell
-        return cell
-    }
-    
-    func makeMajorsCell(at indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: HighlightsMajorsCell.cellID, for: indexPath) as! HighlightsMajorsCell
-        return cell
-    }
-    
-    func makeInfiniteInsightsCell(at indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: discoverCellID, for: indexPath)
-        addChildVC(asChildViewController: makeInfiniteInsightsDiscoverYouViewController(), to: cell.contentView)
-        return cell
-    }
-    
-    func makeDiscoverYouCell(at indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: discoverCellID, for: indexPath)
-        addChildVC(asChildViewController: makeHighlightsDiscoverYouViewController(), to: cell.contentView)
-        return cell
-    }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = indexPath.section
         
@@ -101,7 +79,7 @@ class HighlightsViewController: UITableViewController {
             return HighlightsInfiniteInsightsViewController.viewControllerHeight
         }
         if indexPath.section == HighlightsViewControllerSection.SECTION_DISCOVER_YOU {
-            return HighlightsDiscoverYouViewController.viewControllerHeight
+            return DiscoverYouViewCell.cellHeight
         }
         
         return 200
@@ -121,13 +99,40 @@ class HighlightsViewController: UITableViewController {
 
 extension HighlightsViewController {
     
+    func makeFeaturedCell(at indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HighlightsFeaturedCell", for: indexPath) as! HighlightsFeaturedCell
+        return cell
+    }
+    
+    func makeMajorsCell(at indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: HighlightsMajorsCell.cellID, for: indexPath) as! HighlightsMajorsCell
+        return cell
+    }
+    
+    func makeInfiniteInsightsCell(at indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: discoverCellID, for: indexPath)
+        addChildVC(asChildViewController: makeInfiniteInsightsDiscoverYouViewController(), to: cell.contentView)
+        return cell
+    }
+    
+    func makeDiscoverYouCell(at indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: DiscoverYouViewCell.cellID, for: indexPath)
+        return cell
+    }
+    
     func setupTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         registerFeaturedCell()
         registerMajorsCell()
+        registerDiscoverYouCell()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: discoverCellID)
         
         tableView.tableFooterView = UIView()
+    }
+    
+    func registerDiscoverYouCell() {
+        let nib = UINib(nibName: DiscoverYouViewCell.cellID, bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: DiscoverYouViewCell.cellID)
     }
     
     func registerFeaturedCell() {
@@ -173,12 +178,7 @@ extension HighlightsViewController {
         let viewController = storyboard.instantiateViewController(identifier: "HighlightsInfiniteInsightsViewController") as! HighlightsInfiniteInsightsViewController
         return viewController
     }
-    
-    func makeHighlightsDiscoverYouViewController() -> HighlightsDiscoverYouViewController {
-        let storyboard = UIStoryboard(name: "Highlights", bundle: Bundle.main)
-        let viewController = storyboard.instantiateViewController(identifier: "HighlightsDiscoverYouViewController") as! HighlightsDiscoverYouViewController
-        return viewController
-    }
+
     
 }
 
