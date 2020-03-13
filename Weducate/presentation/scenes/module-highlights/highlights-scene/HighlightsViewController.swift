@@ -46,6 +46,9 @@ class HighlightsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if section == HighlightsViewControllerSection.SECTION_INFINITE_INSIGHTS {
+            return 0
+        }
         return 50
     }
     
@@ -76,7 +79,7 @@ class HighlightsViewController: UITableViewController {
             return 234
         }
         if indexPath.section == HighlightsViewControllerSection.SECTION_INFINITE_INSIGHTS {
-            return InfiniteInsightsCell.cellHeight
+            return 0
         }
         if indexPath.section == HighlightsViewControllerSection.SECTION_DISCOVER_YOU {
             return DiscoverYouViewCell.cellHeight
