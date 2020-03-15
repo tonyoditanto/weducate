@@ -34,17 +34,6 @@ class HighlightsViewController: UITableViewController {
         return headerView
     }
     
-    func makeHeaderViewLabel(at section: Int) -> UILabel {
-        let frame = CGRect(x: 16, y: 8, width: tableView.frame.width, height: 30)
-        let label = UILabel(frame: frame)
-        label.text = sectionTitles[section]
-        
-        label.textColor = makeTableHeaderTintColor(at: section)
-        label.font = makeHeaderViewFont()
-        
-        return label
-    }
-    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == HighlightsViewControllerSection.SECTION_INFINITE_INSIGHTS {
             return 0
@@ -101,6 +90,18 @@ class HighlightsViewController: UITableViewController {
 // MARK: - Views Helpers
 
 extension HighlightsViewController {
+    
+    func makeHeaderViewLabel(at section: Int) -> UILabel {
+        let frame = CGRect(x: 16, y: 8, width: tableView.frame.width, height: 30)
+        let label = UILabel(frame: frame)
+        label.text = sectionTitles[section]
+        
+        label.textColor = makeTableHeaderTintColor(at: section)
+        label.font = makeHeaderViewFont()
+        
+        return label
+    }
+    
     
     func makeFeaturedCell(at indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HighlightsFeaturedCell", for: indexPath) as! HighlightsFeaturedCell

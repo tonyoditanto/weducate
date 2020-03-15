@@ -30,13 +30,13 @@
                         </constraints>
                         <string key="text">World Class Design is
 Here!</string>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interior Design" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFl-Pu-8hh">
                         <rect key="frame" x="20" y="334" width="260" height="15"/>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
                         <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>

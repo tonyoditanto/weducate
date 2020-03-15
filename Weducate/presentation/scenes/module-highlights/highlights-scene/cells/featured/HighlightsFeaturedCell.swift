@@ -73,7 +73,7 @@ extension HighlightsFeaturedCell: UICollectionViewDataSource {
 extension HighlightsFeaturedCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width
+        let width = (collectionView.frame.width) - (collectionView.frame.width * 1 / 8)
         let height: CGFloat = 400
         
         return CGSize(width: width, height: height)
