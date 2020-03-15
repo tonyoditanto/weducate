@@ -84,7 +84,6 @@ extension HighlightsFeaturedCell: UICollectionViewDelegate, UICollectionViewDele
         delegate?.highlightsFeaturedCell(self, collectionView: collectionView, didSelect: indexPath)
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
