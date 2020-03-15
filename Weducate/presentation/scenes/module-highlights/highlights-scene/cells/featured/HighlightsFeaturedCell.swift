@@ -29,6 +29,7 @@ class HighlightsFeaturedCell: UITableViewCell {
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.isPagingEnabled = true
         
         registerCollectionViewCell()
         setupCollectionViewScrollDirection()
@@ -82,6 +83,20 @@ extension HighlightsFeaturedCell: UICollectionViewDelegate, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.highlightsFeaturedCell(self, collectionView: collectionView, didSelect: indexPath)
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
+    }
+
 }
 
 
