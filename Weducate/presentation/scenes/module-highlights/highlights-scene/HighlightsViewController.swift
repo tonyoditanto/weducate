@@ -10,10 +10,17 @@ import UIKit
 
 class HighlightsViewController: UITableViewController {
     let sectionTitles = ["Featured", "High Demand in Near Future", "Infinite Insights", "Discover You"]
+    var majors = [Major]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        fetchMajors()
+    }
+    
+    func fetchMajors() {
+        let repository = MajorRepository()
+        majors = repository.fetchMajors()
     }
     
     
@@ -111,6 +118,7 @@ extension HighlightsViewController {
     
     func makeMajorsCell(at indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HighlightsMajorsCell.cellID, for: indexPath) as! HighlightsMajorsCell
+        cell.configureCell(with: majors)
         return cell
     }
     

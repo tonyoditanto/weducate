@@ -52,6 +52,11 @@
                 <constraint firstItem="D0P-Ge-beb" firstAttribute="top" secondItem="eSh-tZ-rFb" secondAttribute="bottom" id="olA-CE-u3O"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="D0P-Ge-beb" id="u71-Ss-Fw3"/>
+                <outlet property="majorImageView" destination="aOO-5p-ORf" id="ijj-wt-ZQX"/>
+                <outlet property="titleLabel" destination="eSh-tZ-rFb" id="0Sf-Sd-MFY"/>
+            </connections>
             <point key="canvasLocation" x="138.40579710144928" y="152.67857142857142"/>
         </collectionViewCell>
     </objects>

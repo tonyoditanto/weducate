@@ -11,6 +11,7 @@
 		920B3FA0241A4C9700E7E798 /* DiscoverYouViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920B3F9E241A4C9700E7E798 /* DiscoverYouViewCell.swift */; };
 		920B3FA1241A4C9700E7E798 /* DiscoverYouViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920B3F9F241A4C9700E7E798 /* DiscoverYouViewCell.xib */; };
 		92181100241E76D300D1D476 /* Major.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921810FF241E76D300D1D476 /* Major.swift */; };
+		92181103241E776000D1D476 /* MajorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92181102241E776000D1D476 /* MajorRepository.swift */; };
 		921C6FAB241A82B4003A1A81 /* InfiniteInsightsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C6FA9241A82B4003A1A81 /* InfiniteInsightsCell.swift */; };
 		921C6FAC241A82B4003A1A81 /* InfiniteInsightsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 921C6FAA241A82B4003A1A81 /* InfiniteInsightsCell.xib */; };
 		921C6FAE241A93F6003A1A81 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C6FAD241A93F6003A1A81 /* TabBarController.swift */; };
@@ -58,6 +59,7 @@
 		920B3F9E241A4C9700E7E798 /* DiscoverYouViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverYouViewCell.swift; sourceTree = "<group>"; };
 		920B3F9F241A4C9700E7E798 /* DiscoverYouViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverYouViewCell.xib; sourceTree = "<group>"; };
 		921810FF241E76D300D1D476 /* Major.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Major.swift; sourceTree = "<group>"; };
+		92181102241E776000D1D476 /* MajorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MajorRepository.swift; sourceTree = "<group>"; };
 		921C6FA9241A82B4003A1A81 /* InfiniteInsightsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteInsightsCell.swift; sourceTree = "<group>"; };
 		921C6FAA241A82B4003A1A81 /* InfiniteInsightsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfiniteInsightsCell.xib; sourceTree = "<group>"; };
 		921C6FAD241A93F6003A1A81 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,14 @@
 				920B3F9F241A4C9700E7E798 /* DiscoverYouViewCell.xib */,
 			);
 			path = "discover-you";
+			sourceTree = "<group>";
+		};
+		92181101241E773300D1D476 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				92181102241E776000D1D476 /* MajorRepository.swift */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 		925AFA092418F42100C33ACC /* application */ = {
@@ -256,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				925AFA0C2418F47000C33ACC /* domain */,
+				92181101241E773300D1D476 /* data */,
 				92D8E10C2418C6B400B7B13A /* presentation */,
 				925AFA092418F42100C33ACC /* application */,
 				92D8E0EF2418C0B800B7B13A /* Info.plist */,
@@ -429,6 +440,7 @@
 				92AF7238241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift in Sources */,
 				92D67C3C241914A000B620FD /* HighlightsFeaturedCell.swift in Sources */,
 				927A886B241E6593001CCD53 /* FeaturedCardView.swift in Sources */,
+				92181103241E776000D1D476 /* MajorRepository.swift in Sources */,
 				920B3F9C241A498B00E7E798 /* HighlightsViewControllerSection.swift in Sources */,
 				927A8869241E6417001CCD53 /* RoundableCornerImageView.swift in Sources */,
 				92D8E0E12418C0B700B7B13A /* SceneDelegate.swift in Sources */,

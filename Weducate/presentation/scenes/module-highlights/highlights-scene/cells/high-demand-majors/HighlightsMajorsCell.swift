@@ -14,6 +14,8 @@ class HighlightsMajorsCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private var majors = [Major]()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCollectionView()
@@ -42,6 +44,11 @@ class HighlightsMajorsCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func configureCell(with majors: [Major]) {
+        self.majors = majors
+        collectionView.reloadData()
+    }
+    
 }
 
 
@@ -50,11 +57,14 @@ class HighlightsMajorsCell: UITableViewCell {
 extension HighlightsMajorsCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return majors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HighlightsMajorCollectionViewCell.cellID, for: indexPath) as! HighlightsMajorCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HighlightsMajorCollectionViewCell.cellID, for: indexPath) as!
+        HighlightsMajorCollectionViewCell
+        let major = majors[indexPath.row]
+        cell.configureCell(with: major)
         return cell
     }
     
