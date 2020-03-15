@@ -16,7 +16,6 @@ class HighlightsMajorsCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         setupCollectionView()
     }
     
@@ -67,11 +66,24 @@ extension HighlightsMajorsCell: UICollectionViewDataSource {
 extension HighlightsMajorsCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width
-        let height: CGFloat = 200
+        let width = (collectionView.frame.width) - (collectionView.frame.width) * 1 / 8
+        let height: CGFloat = HighlightsMajorCollectionViewCell.cellHeight
         
         return CGSize(width: width, height: height)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
+    }
+
 }
 
 

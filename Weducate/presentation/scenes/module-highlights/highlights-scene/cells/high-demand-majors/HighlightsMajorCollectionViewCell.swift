@@ -10,10 +10,10 @@ import UIKit
 
 class HighlightsMajorCollectionViewCell: UICollectionViewCell {
     static let cellID = "HighlightsMajorCollectionViewCell"
-
+    static let cellHeight: CGFloat = 64
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
 }

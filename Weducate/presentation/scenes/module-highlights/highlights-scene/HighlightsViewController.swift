@@ -48,7 +48,7 @@ class HighlightsViewController: UITableViewController {
             return makeFeaturedCell(at: indexPath)
         }
         if section == HighlightsViewControllerSection.SECTION_MAJORS {
-            return makeFeaturedCell(at: indexPath)
+            return makeMajorsCell(at: indexPath)
         }
         if section == HighlightsViewControllerSection.SECTION_INFINITE_INSIGHTS {
             return makeInfiniteInsightsCell(at: indexPath)
