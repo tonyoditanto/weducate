@@ -15,6 +15,7 @@
 		921C6FAE241A93F6003A1A81 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C6FAD241A93F6003A1A81 /* TabBarController.swift */; };
 		921C6FB0241A945B003A1A81 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C6FAF241A945B003A1A81 /* NavigationController.swift */; };
 		927A8869241E6417001CCD53 /* RoundableCornerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A8868241E6417001CCD53 /* RoundableCornerImageView.swift */; };
+		927A886B241E6593001CCD53 /* FeaturedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A886A241E6593001CCD53 /* FeaturedCardView.swift */; };
 		92AF7235241A31D4008ED30E /* RectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF7234241A31D4008ED30E /* RectangleButton.swift */; };
 		92AF7238241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF7236241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift */; };
 		92AF7239241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92AF7237241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib */; };
@@ -60,6 +61,7 @@
 		921C6FAD241A93F6003A1A81 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		921C6FAF241A945B003A1A81 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		927A8868241E6417001CCD53 /* RoundableCornerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableCornerImageView.swift; sourceTree = "<group>"; };
+		927A886A241E6593001CCD53 /* FeaturedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCardView.swift; sourceTree = "<group>"; };
 		92AF7234241A31D4008ED30E /* RectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleButton.swift; sourceTree = "<group>"; };
 		92AF7236241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteInsightsCollectionViewCell.swift; sourceTree = "<group>"; };
 		92AF7237241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfiniteInsightsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				92BD4F23241A287E001B3A48 /* UIViewController+Child.swift */,
 				92AF7234241A31D4008ED30E /* RectangleButton.swift */,
 				927A8868241E6417001CCD53 /* RoundableCornerImageView.swift */,
+				927A886A241E6593001CCD53 /* FeaturedCardView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				92D67C402419184E00B620FD /* HighlightsFeaturedCollectionViewCell.swift in Sources */,
 				92AF7238241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift in Sources */,
 				92D67C3C241914A000B620FD /* HighlightsFeaturedCell.swift in Sources */,
+				927A886B241E6593001CCD53 /* FeaturedCardView.swift in Sources */,
 				920B3F9C241A498B00E7E798 /* HighlightsViewControllerSection.swift in Sources */,
 				927A8869241E6417001CCD53 /* RoundableCornerImageView.swift in Sources */,
 				92D8E0E12418C0B700B7B13A /* SceneDelegate.swift in Sources */,

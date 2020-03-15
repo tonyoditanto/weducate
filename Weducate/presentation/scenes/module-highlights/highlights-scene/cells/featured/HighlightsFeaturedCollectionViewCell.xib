@@ -16,6 +16,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAU-uJ-aYu" customClass="FeaturedCardView" customModule="Weducate" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_featured" translatesAutoresizingMaskIntoConstraints="NO" id="HqM-0T-Ekq" customClass="RoundableCornerImageView" customModule="Weducate" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="270"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -58,11 +62,15 @@ Nulla tempor pulvinar mi, id vulputate leo posuere …</string>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="HqM-0T-Ekq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3fJ-e2-qDJ"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="iAU-uJ-aYu" secondAttribute="bottom" id="6Yt-ww-L1b"/>
                 <constraint firstItem="FqG-x9-cGJ" firstAttribute="top" secondItem="HqM-0T-Ekq" secondAttribute="bottom" constant="8" id="CYS-T8-Api"/>
                 <constraint firstItem="FqG-x9-cGJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="DgG-ym-JKB"/>
                 <constraint firstItem="aJ0-zS-frm" firstAttribute="top" secondItem="fFl-Pu-8hh" secondAttribute="bottom" constant="4" id="Fnc-7P-I9W"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="iAU-uJ-aYu" secondAttribute="trailing" id="MWc-fk-UuS"/>
                 <constraint firstItem="fFl-Pu-8hh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="SKQ-v7-XE9"/>
+                <constraint firstItem="iAU-uJ-aYu" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="-44" id="TmK-Jp-Qw5"/>
                 <constraint firstAttribute="trailing" secondItem="aJ0-zS-frm" secondAttribute="trailing" constant="20" id="UYb-0o-17Y"/>
+                <constraint firstItem="iAU-uJ-aYu" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="W6L-m8-cXJ"/>
                 <constraint firstItem="HqM-0T-Ekq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XAX-L2-r6P"/>
                 <constraint firstItem="fFl-Pu-8hh" firstAttribute="top" secondItem="FqG-x9-cGJ" secondAttribute="bottom" id="aO0-wa-6qD"/>
                 <constraint firstAttribute="trailing" secondItem="HqM-0T-Ekq" secondAttribute="trailing" id="cdw-re-3RM"/>
