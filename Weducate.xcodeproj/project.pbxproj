@@ -18,6 +18,9 @@
 		921C6FB0241A945B003A1A81 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C6FAF241A945B003A1A81 /* NavigationController.swift */; };
 		927A8869241E6417001CCD53 /* RoundableCornerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A8868241E6417001CCD53 /* RoundableCornerImageView.swift */; };
 		927A886B241E6593001CCD53 /* FeaturedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A886A241E6593001CCD53 /* FeaturedCardView.swift */; };
+		927E67EA241F28A600F430C4 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E67E9241F28A600F430C4 /* MeViewController.swift */; };
+		927E67EC241F292700F430C4 /* MeViewControllerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E67EB241F292700F430C4 /* MeViewControllerSection.swift */; };
+		927E67EF241F2A2200F430C4 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E67EE241F2A2200F430C4 /* UIViewController+Alert.swift */; };
 		92AF7235241A31D4008ED30E /* RectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF7234241A31D4008ED30E /* RectangleButton.swift */; };
 		92AF7238241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF7236241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift */; };
 		92AF7239241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92AF7237241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib */; };
@@ -67,6 +70,9 @@
 		921C6FAF241A945B003A1A81 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		927A8868241E6417001CCD53 /* RoundableCornerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableCornerImageView.swift; sourceTree = "<group>"; };
 		927A886A241E6593001CCD53 /* FeaturedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCardView.swift; sourceTree = "<group>"; };
+		927E67E9241F28A600F430C4 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		927E67EB241F292700F430C4 /* MeViewControllerSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewControllerSection.swift; sourceTree = "<group>"; };
+		927E67EE241F2A2200F430C4 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		92AF7234241A31D4008ED30E /* RectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleButton.swift; sourceTree = "<group>"; };
 		92AF7236241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteInsightsCollectionViewCell.swift; sourceTree = "<group>"; };
 		92AF7237241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfiniteInsightsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 				927A8868241E6417001CCD53 /* RoundableCornerImageView.swift */,
 				927A886A241E6593001CCD53 /* FeaturedCardView.swift */,
 				92E104A7241F112F005AE6C9 /* BorderlessButton.swift */,
+				927E67EE241F2A2200F430C4 /* UIViewController+Alert.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -326,6 +333,8 @@
 		92E104A9241F12AD005AE6C9 /* me-scene */ = {
 			isa = PBXGroup;
 			children = (
+				927E67E9241F28A600F430C4 /* MeViewController.swift */,
+				927E67EB241F292700F430C4 /* MeViewControllerSection.swift */,
 			);
 			path = "me-scene";
 			sourceTree = "<group>";
@@ -446,14 +455,17 @@
 				92AF7235241A31D4008ED30E /* RectangleButton.swift in Sources */,
 				92D8E0DF2418C0B700B7B13A /* AppDelegate.swift in Sources */,
 				921C6FAB241A82B4003A1A81 /* InfiniteInsightsCell.swift in Sources */,
+				927E67EF241F2A2200F430C4 /* UIViewController+Alert.swift in Sources */,
 				921C6FB0241A945B003A1A81 /* NavigationController.swift in Sources */,
 				92D67C402419184E00B620FD /* HighlightsFeaturedCollectionViewCell.swift in Sources */,
 				92AF7238241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift in Sources */,
 				92D67C3C241914A000B620FD /* HighlightsFeaturedCell.swift in Sources */,
 				927A886B241E6593001CCD53 /* FeaturedCardView.swift in Sources */,
+				927E67EA241F28A600F430C4 /* MeViewController.swift in Sources */,
 				92181103241E776000D1D476 /* MajorRepository.swift in Sources */,
 				920B3F9C241A498B00E7E798 /* HighlightsViewControllerSection.swift in Sources */,
 				92E104A8241F112F005AE6C9 /* BorderlessButton.swift in Sources */,
+				927E67EC241F292700F430C4 /* MeViewControllerSection.swift in Sources */,
 				927A8869241E6417001CCD53 /* RoundableCornerImageView.swift in Sources */,
 				92D8E0E12418C0B700B7B13A /* SceneDelegate.swift in Sources */,
 				92D67C4C24191ED700B620FD /* HighlightsMajorsCell.swift in Sources */,

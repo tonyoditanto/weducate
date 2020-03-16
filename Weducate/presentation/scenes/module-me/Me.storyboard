@@ -29,11 +29,11 @@
         <!--Me-->
         <scene sceneID="59J-Ge-dK7">
             <objects>
-                <tableViewController storyboardIdentifier="MeViewController" id="CAt-dP-gkj" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MeViewController" id="CAt-dP-gkj" customClass="MeViewController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VIL-1D-XLt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="fFJ-AN-D1a">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -81,7 +81,7 @@
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="cfV-4E-zHS">
-                            <rect key="frame" x="0.0" y="612.5" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="612.5" width="414" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>
