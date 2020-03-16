@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PUK-Fy-Hji">
-                        <rect key="frame" x="16" y="16" width="288" height="400"/>
+                        <rect key="frame" x="0.0" y="16" width="320" height="400"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wNY-Up-8kF">
                             <size key="itemSize" width="50" height="50"/>
@@ -30,8 +30,8 @@
                 <constraints>
                     <constraint firstItem="PUK-Fy-Hji" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="ITe-bc-35i"/>
                     <constraint firstAttribute="bottom" secondItem="PUK-Fy-Hji" secondAttribute="bottom" constant="16" id="JAn-H8-ktZ"/>
-                    <constraint firstItem="PUK-Fy-Hji" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="n2R-pd-ZHO"/>
-                    <constraint firstAttribute="trailing" secondItem="PUK-Fy-Hji" secondAttribute="trailing" constant="16" id="pZe-rG-us3"/>
+                    <constraint firstItem="PUK-Fy-Hji" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="n2R-pd-ZHO"/>
+                    <constraint firstAttribute="trailing" secondItem="PUK-Fy-Hji" secondAttribute="trailing" id="pZe-rG-us3"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
