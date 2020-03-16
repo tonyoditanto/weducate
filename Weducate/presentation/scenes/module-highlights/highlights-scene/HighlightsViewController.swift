@@ -15,12 +15,6 @@ class HighlightsViewController: UITableViewController {
     let SECTION_MAJORS = 1
     
     
-    
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -72,7 +66,6 @@ class HighlightsViewController: UITableViewController {
         
         return view
     }
-    
     
     func makeHeaderViewFont() -> UIFont {
         var font = UIFont.systemFont(ofSize: 22)

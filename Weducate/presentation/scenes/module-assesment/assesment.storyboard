@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mMl-y8-n8N">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Allert View Controller-->
+        <scene sceneID="Knp-m6-yXX">
+            <objects>
+                <viewController id="mMl-y8-n8N" customClass="AllertViewController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k7y-U8-p08" customClass="UIAlertView" customModule="Weducate" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aqv-9r-JWi">
+                                <rect key="frame" x="94" y="325" width="225" height="247"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Aqv-9r-JWi" firstAttribute="centerX" secondItem="k7y-U8-p08" secondAttribute="centerX" id="AKk-uR-rDN"/>
+                            <constraint firstItem="Aqv-9r-JWi" firstAttribute="top" secondItem="5Uu-Ns-lhs" secondAttribute="top" constant="220" id="Kb7-WY-yOL"/>
+                            <constraint firstItem="5Uu-Ns-lhs" firstAttribute="bottom" secondItem="Aqv-9r-JWi" secondAttribute="bottom" constant="470" id="aTK-wu-ldc"/>
+                            <constraint firstItem="Aqv-9r-JWi" firstAttribute="leading" secondItem="5Uu-Ns-lhs" secondAttribute="leading" constant="87" id="d12-1P-zDz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Uu-Ns-lhs"/>
+                    </view>
+                    <connections>
+                        <outlet property="logo" destination="Aqv-9r-JWi" id="ygm-xc-tJX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jQx-SD-O1u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="131"/>
+        </scene>
+    </scenes>
+</document>
