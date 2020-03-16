@@ -9,9 +9,10 @@
         <!--Me-->
         <scene sceneID="U97-2l-viV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ss5-xP-rkT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Me" id="H65-2h-RPV"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ss5-xP-rkT" customClass="NavigationController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Me" image="person.fill" catalog="system" selectedImage="person.fill" id="7H3-OW-sPm"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ead-JP-W0N">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -259,5 +260,6 @@
     </scenes>
     <resources>
         <image name="ic_me" width="88" height="88"/>
+        <image name="person.fill" catalog="system" width="64" height="60"/>
     </resources>
 </document>
