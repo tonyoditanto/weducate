@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850C7B7B242034BB001B9328 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C7B7A242034BB001B9328 /* CategoryListViewController.swift */; };
+		850C7B7E24203507001B9328 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C7B7D24203507001B9328 /* CategoryTableViewCell.swift */; };
+		850C7B80242037EA001B9328 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C7B7F242037EA001B9328 /* Category.swift */; };
 		92BF63482419F5EF00259C06 /* FeaturedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */; };
 		92D67C31241902A300B620FD /* HighlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D67C30241902A300B620FD /* HighlightsViewController.swift */; };
 		92D67C3C241914A000B620FD /* HighlightsFeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D67C3A241914A000B620FD /* HighlightsFeaturedCell.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		850C7B7A242034BB001B9328 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
+		850C7B7D24203507001B9328 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		850C7B7F242037EA001B9328 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedDetailViewController.swift; sourceTree = "<group>"; };
 		92D67C30241902A300B620FD /* HighlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsViewController.swift; sourceTree = "<group>"; };
 		92D67C3A241914A000B620FD /* HighlightsFeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsFeaturedCell.swift; sourceTree = "<group>"; };
@@ -84,6 +90,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		850C7B7524202B86001B9328 /* category-list-scene */ = {
+			isa = PBXGroup;
+			children = (
+				850C7B7A242034BB001B9328 /* CategoryListViewController.swift */,
+				850C7B7C242034C9001B9328 /* cells */,
+			);
+			path = "category-list-scene";
+			sourceTree = "<group>";
+		};
+		850C7B7C242034C9001B9328 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				850C7B7D24203507001B9328 /* CategoryTableViewCell.swift */,
+				850C7B7F242037EA001B9328 /* Category.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		925AFA092418F42100C33ACC /* application */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				92D8E1072418C37500B7B13A /* Majors.storyboard */,
+				850C7B7524202B86001B9328 /* category-list-scene */,
 			);
 			path = "module-majors";
 			sourceTree = "<group>";
@@ -358,15 +383,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				850C7B7B242034BB001B9328 /* CategoryListViewController.swift in Sources */,
 				92BF63482419F5EF00259C06 /* FeaturedDetailViewController.swift in Sources */,
 				92D8E0DF2418C0B700B7B13A /* AppDelegate.swift in Sources */,
 				92D67C402419184E00B620FD /* HighlightsFeaturedCollectionViewCell.swift in Sources */,
 				92D67C3C241914A000B620FD /* HighlightsFeaturedCell.swift in Sources */,
 				92D8E0E12418C0B700B7B13A /* SceneDelegate.swift in Sources */,
+				850C7B7E24203507001B9328 /* CategoryTableViewCell.swift in Sources */,
 				92D67C4C24191ED700B620FD /* HighlightsMajorsCell.swift in Sources */,
 				92D67C4824191D0300B620FD /* HighlightsMajorCollectionViewCell.swift in Sources */,
 				92D8E0E92418C0B700B7B13A /* Weducate.xcdatamodeld in Sources */,
 				92D67C31241902A300B620FD /* HighlightsViewController.swift in Sources */,
+				850C7B80242037EA001B9328 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
