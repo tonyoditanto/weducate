@@ -10,7 +10,6 @@
         <!--Majors-->
         <scene sceneID="ofX-kD-ARm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="brf-CI-PH8" sceneMemberID="firstResponder"/>
                 <viewController id="6b6-gv-JY7" customClass="ViewController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fxu-38-vkY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -20,6 +19,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Majors" id="vhy-fV-gqs"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="brf-CI-PH8" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1218.840579710145" y="428.57142857142856"/>
         </scene>
