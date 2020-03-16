@@ -9,15 +9,21 @@
 import UIKit
 
 class MeViewController: UITableViewController {
-
+    var sections = [SectionData]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    // MARK: - Table view data source
+        initSections()
     }
-
+    
+    func initSections() {
+        sections.append(SectionData(headerTitle: "PROFILE DETAILS", footerTitle: "Profile last edited 20/03/20"))
+        sections.append(SectionData(headerTitle: "Profile last edited 20/03/20", footerTitle: "Assessment last taken 20/03/20"))
+        sections.append(SectionData(headerTitle: nil, footerTitle: nil))
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return sections.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,6 +44,5 @@ class MeViewController: UITableViewController {
             showAlertController(withTitle: "Sign Out", message: "Are you sure you want to sign out?", completion: nil)
         }
     }
-
-
+    
 }
