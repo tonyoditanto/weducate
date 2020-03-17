@@ -16,6 +16,12 @@
 		921C6FAC241A82B4003A1A81 /* InfiniteInsightsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 921C6FAA241A82B4003A1A81 /* InfiniteInsightsCell.xib */; };
 		921C6FAE241A93F6003A1A81 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C6FAD241A93F6003A1A81 /* TabBarController.swift */; };
 		921C6FB0241A945B003A1A81 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C6FAF241A945B003A1A81 /* NavigationController.swift */; };
+		926F35F8242090B800A5A561 /* PlanningToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926F35F6242090B800A5A561 /* PlanningToDoCell.swift */; };
+		926F35F9242090B800A5A561 /* PlanningToDoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926F35F7242090B800A5A561 /* PlanningToDoCell.xib */; };
+		926F35FC242091CE00A5A561 /* PlanningDoingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926F35FA242091CE00A5A561 /* PlanningDoingCell.swift */; };
+		926F35FD242091CE00A5A561 /* PlanningDoingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926F35FB242091CE00A5A561 /* PlanningDoingCell.xib */; };
+		926F3600242092A100A5A561 /* PlanningDoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926F35FE242092A100A5A561 /* PlanningDoneCell.swift */; };
+		926F3601242092A100A5A561 /* PlanningDoneCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 926F35FF242092A100A5A561 /* PlanningDoneCell.xib */; };
 		927A8869241E6417001CCD53 /* RoundableCornerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A8868241E6417001CCD53 /* RoundableCornerImageView.swift */; };
 		927A886B241E6593001CCD53 /* FeaturedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A886A241E6593001CCD53 /* FeaturedCardView.swift */; };
 		927E67EA241F28A600F430C4 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E67E9241F28A600F430C4 /* MeViewController.swift */; };
@@ -27,6 +33,7 @@
 		92AF7239241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92AF7237241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib */; };
 		92B30A512420757200073766 /* Planning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B30A502420757200073766 /* Planning.storyboard */; };
 		92B30A532420870E00073766 /* RoundableCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B30A522420870E00073766 /* RoundableCornerView.swift */; };
+		92B30A5624208BE800073766 /* PlanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B30A5524208BE800073766 /* PlanningViewController.swift */; };
 		92BD4F24241A287E001B3A48 /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD4F23241A287E001B3A48 /* UIViewController+Child.swift */; };
 		92BF63482419F5EF00259C06 /* FeaturedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */; };
 		92D67C31241902A300B620FD /* HighlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D67C30241902A300B620FD /* HighlightsViewController.swift */; };
@@ -71,6 +78,12 @@
 		921C6FAA241A82B4003A1A81 /* InfiniteInsightsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfiniteInsightsCell.xib; sourceTree = "<group>"; };
 		921C6FAD241A93F6003A1A81 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		921C6FAF241A945B003A1A81 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		926F35F6242090B800A5A561 /* PlanningToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningToDoCell.swift; sourceTree = "<group>"; };
+		926F35F7242090B800A5A561 /* PlanningToDoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanningToDoCell.xib; sourceTree = "<group>"; };
+		926F35FA242091CE00A5A561 /* PlanningDoingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningDoingCell.swift; sourceTree = "<group>"; };
+		926F35FB242091CE00A5A561 /* PlanningDoingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanningDoingCell.xib; sourceTree = "<group>"; };
+		926F35FE242092A100A5A561 /* PlanningDoneCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningDoneCell.swift; sourceTree = "<group>"; };
+		926F35FF242092A100A5A561 /* PlanningDoneCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanningDoneCell.xib; sourceTree = "<group>"; };
 		927A8868241E6417001CCD53 /* RoundableCornerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableCornerImageView.swift; sourceTree = "<group>"; };
 		927A886A241E6593001CCD53 /* FeaturedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCardView.swift; sourceTree = "<group>"; };
 		927E67E9241F28A600F430C4 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +95,7 @@
 		92AF7237241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfiniteInsightsCollectionViewCell.xib; sourceTree = "<group>"; };
 		92B30A502420757200073766 /* Planning.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Planning.storyboard; sourceTree = "<group>"; };
 		92B30A522420870E00073766 /* RoundableCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableCornerView.swift; sourceTree = "<group>"; };
+		92B30A5524208BE800073766 /* PlanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewController.swift; sourceTree = "<group>"; };
 		92BD4F23241A287E001B3A48 /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
 		92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedDetailViewController.swift; sourceTree = "<group>"; };
 		92D67C30241902A300B620FD /* HighlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsViewController.swift; sourceTree = "<group>"; };
@@ -203,9 +217,32 @@
 		92B30A4F2420755A00073766 /* module-planning */ = {
 			isa = PBXGroup;
 			children = (
-				92B30A502420757200073766 /* Planning.storyboard */,
+				92B30A5424208BD200073766 /* planning-scene */,
 			);
 			path = "module-planning";
+			sourceTree = "<group>";
+		};
+		92B30A5424208BD200073766 /* planning-scene */ = {
+			isa = PBXGroup;
+			children = (
+				92B30A502420757200073766 /* Planning.storyboard */,
+				92B30A5524208BE800073766 /* PlanningViewController.swift */,
+				92B30A5724208BF500073766 /* cells */,
+			);
+			path = "planning-scene";
+			sourceTree = "<group>";
+		};
+		92B30A5724208BF500073766 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				926F35F6242090B800A5A561 /* PlanningToDoCell.swift */,
+				926F35F7242090B800A5A561 /* PlanningToDoCell.xib */,
+				926F35FA242091CE00A5A561 /* PlanningDoingCell.swift */,
+				926F35FB242091CE00A5A561 /* PlanningDoingCell.xib */,
+				926F35FE242092A100A5A561 /* PlanningDoneCell.swift */,
+				926F35FF242092A100A5A561 /* PlanningDoneCell.xib */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		92BD4F20241A1F6C001B3A48 /* infinite-insights */ = {
@@ -437,6 +474,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926F35F9242090B800A5A561 /* PlanningToDoCell.xib in Resources */,
 				92D67C4924191D0300B620FD /* HighlightsMajorCollectionViewCell.xib in Resources */,
 				92AF7239241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib in Resources */,
 				92D8E1082418C37500B7B13A /* Majors.storyboard in Resources */,
@@ -450,6 +488,8 @@
 				92D8E0EB2418C0B800B7B13A /* Assets.xcassets in Resources */,
 				921C6FAC241A82B4003A1A81 /* InfiniteInsightsCell.xib in Resources */,
 				92D8E0E62418C0B700B7B13A /* Main.storyboard in Resources */,
+				926F35FD242091CE00A5A561 /* PlanningDoingCell.xib in Resources */,
+				926F3601242092A100A5A561 /* PlanningDoneCell.xib in Resources */,
 				92D8E1052418C1F100B7B13A /* Highlights.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,9 +512,12 @@
 				921C6FAE241A93F6003A1A81 /* TabBarController.swift in Sources */,
 				92AF7235241A31D4008ED30E /* RectangleButton.swift in Sources */,
 				92D8E0DF2418C0B700B7B13A /* AppDelegate.swift in Sources */,
+				926F35F8242090B800A5A561 /* PlanningToDoCell.swift in Sources */,
 				921C6FAB241A82B4003A1A81 /* InfiniteInsightsCell.swift in Sources */,
+				926F35FC242091CE00A5A561 /* PlanningDoingCell.swift in Sources */,
 				927E67EF241F2A2200F430C4 /* UIViewController+Alert.swift in Sources */,
 				921C6FB0241A945B003A1A81 /* NavigationController.swift in Sources */,
+				926F3600242092A100A5A561 /* PlanningDoneCell.swift in Sources */,
 				92D67C402419184E00B620FD /* HighlightsFeaturedCollectionViewCell.swift in Sources */,
 				92AF7238241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift in Sources */,
 				92D67C3C241914A000B620FD /* HighlightsFeaturedCell.swift in Sources */,
@@ -485,6 +528,7 @@
 				92B30A532420870E00073766 /* RoundableCornerView.swift in Sources */,
 				92E104A8241F112F005AE6C9 /* BorderlessButton.swift in Sources */,
 				927E67EC241F292700F430C4 /* MeViewControllerSection.swift in Sources */,
+				92B30A5624208BE800073766 /* PlanningViewController.swift in Sources */,
 				927A8869241E6417001CCD53 /* RoundableCornerImageView.swift in Sources */,
 				92D8E0E12418C0B700B7B13A /* SceneDelegate.swift in Sources */,
 				92D67C4C24191ED700B620FD /* HighlightsMajorsCell.swift in Sources */,
