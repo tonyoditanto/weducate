@@ -25,6 +25,7 @@
 		92AF7235241A31D4008ED30E /* RectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF7234241A31D4008ED30E /* RectangleButton.swift */; };
 		92AF7238241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF7236241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift */; };
 		92AF7239241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92AF7237241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib */; };
+		92B30A512420757200073766 /* Planning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B30A502420757200073766 /* Planning.storyboard */; };
 		92BD4F24241A287E001B3A48 /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD4F23241A287E001B3A48 /* UIViewController+Child.swift */; };
 		92BF63482419F5EF00259C06 /* FeaturedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */; };
 		92D67C31241902A300B620FD /* HighlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D67C30241902A300B620FD /* HighlightsViewController.swift */; };
@@ -78,6 +79,7 @@
 		92AF7234241A31D4008ED30E /* RectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleButton.swift; sourceTree = "<group>"; };
 		92AF7236241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteInsightsCollectionViewCell.swift; sourceTree = "<group>"; };
 		92AF7237241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfiniteInsightsCollectionViewCell.xib; sourceTree = "<group>"; };
+		92B30A502420757200073766 /* Planning.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Planning.storyboard; sourceTree = "<group>"; };
 		92BD4F23241A287E001B3A48 /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
 		92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedDetailViewController.swift; sourceTree = "<group>"; };
 		92D67C30241902A300B620FD /* HighlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				92D8E1032418C1A500B7B13A /* module-highlights */,
 				92D8E1062418C34A00B7B13A /* module-majors */,
 				92D8E1092418C3F200B7B13A /* module-me */,
+				92B30A4F2420755A00073766 /* module-planning */,
 			);
 			path = scenes;
 			sourceTree = "<group>";
@@ -192,6 +195,14 @@
 				921810FF241E76D300D1D476 /* Major.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		92B30A4F2420755A00073766 /* module-planning */ = {
+			isa = PBXGroup;
+			children = (
+				92B30A502420757200073766 /* Planning.storyboard */,
+			);
+			path = "module-planning";
 			sourceTree = "<group>";
 		};
 		92BD4F20241A1F6C001B3A48 /* infinite-insights */ = {
@@ -432,6 +443,7 @@
 				92D67C412419184E00B620FD /* HighlightsFeaturedCollectionViewCell.xib in Resources */,
 				92D67C3D241914A000B620FD /* HighlightsFeaturedCell.xib in Resources */,
 				92D67C4D24191ED700B620FD /* HighlightsMajorsCell.xib in Resources */,
+				92B30A512420757200073766 /* Planning.storyboard in Resources */,
 				92D8E0EB2418C0B800B7B13A /* Assets.xcassets in Resources */,
 				921C6FAC241A82B4003A1A81 /* InfiniteInsightsCell.xib in Resources */,
 				92D8E0E62418C0B700B7B13A /* Main.storyboard in Resources */,

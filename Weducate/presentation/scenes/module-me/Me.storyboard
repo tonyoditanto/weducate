@@ -13,8 +13,8 @@
                     <tabBarItem key="tabBarItem" title="Me" image="person.fill" catalog="system" selectedImage="person.fill" id="7H3-OW-sPm"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ead-JP-W0N">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Ead-JP-W0N">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -81,7 +81,7 @@
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="cfV-4E-zHS">
-                            <rect key="frame" x="0.0" y="661.5" width="414" height="0.0"/>
+                            <rect key="frame" x="0.0" y="681.5" width="414" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         </view>
@@ -233,6 +233,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="GLw-s2-lI9" kind="show" id="4JU-wN-mbY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -314,11 +317,21 @@
                             <outlet property="delegate" destination="tff-MO-Qbm" id="5pC-7Q-AVO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Edit Username" id="Oxd-37-uwg"/>
+                    <navigationItem key="navigationItem" title="Edit Username" largeTitleDisplayMode="never" id="Oxd-37-uwg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fcG-hs-J6I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1875" y="1154"/>
+            <point key="canvasLocation" x="1906" y="872"/>
+        </scene>
+        <!--Planning-->
+        <scene sceneID="Zdn-3s-71Q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Planning" id="GLw-s2-lI9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1hT-ty-uUz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czb-ci-wrT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1889" y="1373"/>
         </scene>
     </scenes>
     <resources>
