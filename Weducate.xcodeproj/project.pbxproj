@@ -26,6 +26,7 @@
 		92AF7238241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF7236241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift */; };
 		92AF7239241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92AF7237241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib */; };
 		92B30A512420757200073766 /* Planning.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92B30A502420757200073766 /* Planning.storyboard */; };
+		92B30A532420870E00073766 /* RoundableCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B30A522420870E00073766 /* RoundableCornerView.swift */; };
 		92BD4F24241A287E001B3A48 /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD4F23241A287E001B3A48 /* UIViewController+Child.swift */; };
 		92BF63482419F5EF00259C06 /* FeaturedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */; };
 		92D67C31241902A300B620FD /* HighlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D67C30241902A300B620FD /* HighlightsViewController.swift */; };
@@ -80,6 +81,7 @@
 		92AF7236241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteInsightsCollectionViewCell.swift; sourceTree = "<group>"; };
 		92AF7237241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfiniteInsightsCollectionViewCell.xib; sourceTree = "<group>"; };
 		92B30A502420757200073766 /* Planning.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Planning.storyboard; sourceTree = "<group>"; };
+		92B30A522420870E00073766 /* RoundableCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableCornerView.swift; sourceTree = "<group>"; };
 		92BD4F23241A287E001B3A48 /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
 		92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedDetailViewController.swift; sourceTree = "<group>"; };
 		92D67C30241902A300B620FD /* HighlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				927A886A241E6593001CCD53 /* FeaturedCardView.swift */,
 				92E104A7241F112F005AE6C9 /* BorderlessButton.swift */,
 				927E67EE241F2A2200F430C4 /* UIViewController+Alert.swift */,
+				92B30A522420870E00073766 /* RoundableCornerView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				927E67EA241F28A600F430C4 /* MeViewController.swift in Sources */,
 				92181103241E776000D1D476 /* MajorRepository.swift in Sources */,
 				920B3F9C241A498B00E7E798 /* HighlightsViewControllerSection.swift in Sources */,
+				92B30A532420870E00073766 /* RoundableCornerView.swift in Sources */,
 				92E104A8241F112F005AE6C9 /* BorderlessButton.swift in Sources */,
 				927E67EC241F292700F430C4 /* MeViewControllerSection.swift in Sources */,
 				927A8869241E6417001CCD53 /* RoundableCornerImageView.swift in Sources */,
