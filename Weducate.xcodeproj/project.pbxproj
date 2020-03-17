@@ -214,6 +214,33 @@
 			path = models;
 			sourceTree = "<group>";
 		};
+		926F36022420988500A5A561 /* todo */ = {
+			isa = PBXGroup;
+			children = (
+				926F35F6242090B800A5A561 /* PlanningToDoCell.swift */,
+				926F35F7242090B800A5A561 /* PlanningToDoCell.xib */,
+			);
+			path = todo;
+			sourceTree = "<group>";
+		};
+		926F36032420988F00A5A561 /* doing */ = {
+			isa = PBXGroup;
+			children = (
+				926F35FA242091CE00A5A561 /* PlanningDoingCell.swift */,
+				926F35FB242091CE00A5A561 /* PlanningDoingCell.xib */,
+			);
+			path = doing;
+			sourceTree = "<group>";
+		};
+		926F36042420989C00A5A561 /* planning */ = {
+			isa = PBXGroup;
+			children = (
+				926F35FE242092A100A5A561 /* PlanningDoneCell.swift */,
+				926F35FF242092A100A5A561 /* PlanningDoneCell.xib */,
+			);
+			path = planning;
+			sourceTree = "<group>";
+		};
 		92B30A4F2420755A00073766 /* module-planning */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,12 +262,9 @@
 		92B30A5724208BF500073766 /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				926F35F6242090B800A5A561 /* PlanningToDoCell.swift */,
-				926F35F7242090B800A5A561 /* PlanningToDoCell.xib */,
-				926F35FA242091CE00A5A561 /* PlanningDoingCell.swift */,
-				926F35FB242091CE00A5A561 /* PlanningDoingCell.xib */,
-				926F35FE242092A100A5A561 /* PlanningDoneCell.swift */,
-				926F35FF242092A100A5A561 /* PlanningDoneCell.xib */,
+				926F36022420988500A5A561 /* todo */,
+				926F36032420988F00A5A561 /* doing */,
+				926F36042420989C00A5A561 /* planning */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -699,7 +723,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V6T249GHKX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Weducate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -717,7 +741,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V6T249GHKX;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Weducate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
