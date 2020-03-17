@@ -102,6 +102,9 @@
                                         <segment title="Done"/>
                                         <segment title="All"/>
                                     </segments>
+                                    <connections>
+                                        <action selector="segmentedControlDidTap:" destination="nxg-km-VVG" eventType="valueChanged" id="6CZ-3n-lqy"/>
+                                    </connections>
                                 </segmentedControl>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
