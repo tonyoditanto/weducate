@@ -18,12 +18,22 @@ enum PlanningViewControllerCellType: Int {
 class PlanningViewController: UITableViewController {
     var selectedSegmentIndex = 0
     var searchTextField: UITextField?
+    let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupSearchController()
         tableView.tableFooterView = UIView()
         registerCells()
+    }
+    
+    func setupSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
     
     @IBAction func addPlanBarButtonDidTap(_ sender: UIBarButtonItem) {
@@ -121,6 +131,18 @@ class PlanningViewController: UITableViewController {
             return PlanningDoneCell.cellHeight
         }
         return 0
+    }
+    
+}
+
+
+// MARK: - UISearchResultsUpdating
+
+extension PlanningViewController: UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else { return }
+        print(text)
     }
     
 }
