@@ -132,7 +132,11 @@
                         </view>
                     </tableView>
                     <navigationItem key="navigationItem" title="Planning" largeTitleDisplayMode="never" id="8Gk-uU-ziL">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="ERZ-bb-nQz"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="ERZ-bb-nQz">
+                            <connections>
+                                <action selector="addPlanBarButtonDidTap:" destination="nxg-km-VVG" id="obm-35-Rzl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>

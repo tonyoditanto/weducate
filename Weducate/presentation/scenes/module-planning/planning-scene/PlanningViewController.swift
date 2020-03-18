@@ -17,12 +17,37 @@ enum PlanningViewControllerCellType: Int {
 
 class PlanningViewController: UITableViewController {
     var selectedSegmentIndex = 0
+    var searchTextField: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.tableFooterView = UIView()
         registerCells()
+    }
+    
+    @IBAction func addPlanBarButtonDidTap(_ sender: UIBarButtonItem) {
+        showAddPlanningAlertController()
+    }
+    
+    func showAddPlanningAlertController() {
+        present(makeAlertController(), animated: true, completion: nil)
+    }
+    
+    func makeAlertController() -> UIAlertController {
+        let alertController = UIAlertController(title: "Planning Item", message: "Input your planning item title", preferredStyle: .alert)
+        
+        let addAction = UIAlertAction(title: "Add", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(addAction)
+        alertController.addAction(cancelAction)
+        
+        alertController.addTextField { textField in
+            self.searchTextField = textField
+            self.searchTextField?.placeholder = "Title"
+        }
+        return alertController
     }
     
     func registerCells() {
