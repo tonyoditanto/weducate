@@ -11,7 +11,6 @@ import UIKit
 class CategoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var CategoryImageView: UIImageView!
-    
     @IBOutlet weak var CategoryNameLabel: UILabel!
     
     func setCategory(category: Category){
