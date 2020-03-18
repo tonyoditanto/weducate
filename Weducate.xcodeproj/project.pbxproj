@@ -244,6 +244,7 @@
 		92B30A4F2420755A00073766 /* module-planning */ = {
 			isa = PBXGroup;
 			children = (
+				92B30A502420757200073766 /* Planning.storyboard */,
 				92B30A5424208BD200073766 /* planning-scene */,
 			);
 			path = "module-planning";
@@ -252,7 +253,6 @@
 		92B30A5424208BD200073766 /* planning-scene */ = {
 			isa = PBXGroup;
 			children = (
-				92B30A502420757200073766 /* Planning.storyboard */,
 				92B30A5524208BE800073766 /* PlanningViewController.swift */,
 				92B30A5724208BF500073766 /* cells */,
 			);
