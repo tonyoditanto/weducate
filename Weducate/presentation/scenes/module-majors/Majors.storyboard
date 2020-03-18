@@ -88,9 +88,7 @@
         <scene sceneID="amD-i7-4pq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8kf-CY-GzS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Majors" image="doc.text.magnifyingglass" catalog="system" selectedImage="doc.text.magnifyingglass" id="FNy-nK-rbP">
-                        <color key="badgeColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Majors" image="doc.text.magnifyingglass" catalog="system" selectedImage="doc.text.magnifyingglass" id="FNy-nK-rbP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="YqA-mC-VhL">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>

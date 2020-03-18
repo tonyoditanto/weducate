@@ -22,49 +22,24 @@ class CategoryListViewController: UIViewController {
     func createArray() -> [Category]{
         
         var tempCategories: [Category] = []
+        let categoryNames: [String] = ["IT",
+                                      "Natural Sciences",
+                                      "Social",
+                                      "Art",
+                                      "Medical",
+                                      "Engineering",
+                                      "Business",
+                                      "Agriculture",
+                                      "Music",
+                                      "Biotech",
+                                      "Multimedia",
+                                      "Broadcasting"]
         
-        let category1 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "IT")
-        let category2 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Natural Sciences")
-        let category3 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Social")
-        let category4 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Art")
-        let category5 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Medical")
-        let category6 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Engineering")
-        
-        let category7 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Business")
-        let category8 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Agriculture")
-        let category9 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Music")
-        let category10 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Art")
-        let category11 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Medical")
-        let category12 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Engineering")
-        
-        let category13 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "IT")
-        let category14 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Natural Sciences")
-        let category15 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Social")
-        let category16 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Art")
-        let category17 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Medical")
-        let category18 = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: "Engineering")
-        
-        tempCategories.append(category1)
-        tempCategories.append(category2)
-        tempCategories.append(category3)
-        tempCategories.append(category4)
-        tempCategories.append(category5)
-        tempCategories.append(category6)
-        
-        tempCategories.append(category7)
-        tempCategories.append(category8)
-        tempCategories.append(category9)
-        tempCategories.append(category10)
-        tempCategories.append(category11)
-        tempCategories.append(category12)
-        
-        tempCategories.append(category13)
-        tempCategories.append(category14)
-        tempCategories.append(category15)
-        tempCategories.append(category16)
-        tempCategories.append(category17)
-        tempCategories.append(category18)
-        
+        for categoryName in categoryNames{
+            let category = Category(categoryIcon: #imageLiteral(resourceName: "category_list_icon"), categoryName: categoryName)
+            tempCategories.append(category)
+        }
+
         return tempCategories
     }
 
