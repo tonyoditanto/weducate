@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PlanningDoneCell" rowHeight="60" id="faX-vX-Eos" customClass="PlanningDoneCell" customModule="Weducate" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="faX-vX-Eos" id="edy-St-Ivk">
+                <rect key="frame" x="0.0" y="0.0" width="383" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nilai Rapor Sains " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVz-Bk-UU4">
+                        <rect key="frame" x="20" y="11" width="291" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="wV8-S9-i2K"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https:youtube.com/channel/video" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wX8-WE-U7M">
+                        <rect key="frame" x="20" y="34" width="291" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NVz-Bk-UU4" firstAttribute="top" secondItem="edy-St-Ivk" secondAttribute="topMargin" id="4mI-W8-adS"/>
+                    <constraint firstItem="NVz-Bk-UU4" firstAttribute="leading" secondItem="edy-St-Ivk" secondAttribute="leadingMargin" id="6ix-Tg-HiM"/>
+                    <constraint firstItem="wX8-WE-U7M" firstAttribute="top" secondItem="NVz-Bk-UU4" secondAttribute="bottom" constant="2" id="9oj-cI-nQ2"/>
+                    <constraint firstItem="wX8-WE-U7M" firstAttribute="trailing" secondItem="NVz-Bk-UU4" secondAttribute="trailing" id="WYE-XF-IRe"/>
+                    <constraint firstItem="NVz-Bk-UU4" firstAttribute="trailing" secondItem="edy-St-Ivk" secondAttribute="trailingMargin" constant="-64" id="dHE-IR-9Pe"/>
+                    <constraint firstItem="wX8-WE-U7M" firstAttribute="leading" secondItem="edy-St-Ivk" secondAttribute="leadingMargin" id="qvh-zZ-1OR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="NVz-Bk-UU4" id="TUz-Cj-diz"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="153"/>
+        </tableViewCell>
+    </objects>
+</document>
