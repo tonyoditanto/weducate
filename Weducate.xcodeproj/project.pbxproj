@@ -93,8 +93,6 @@
 		850C7B7524202B86001B9328 /* category-list-scene */ = {
 			isa = PBXGroup;
 			children = (
-				853D14632423095C00B49291 /* major-list-scene */,
-				853D14622423093400B49291 /* category-detail-scene */,
 				850C7B7A242034BB001B9328 /* CategoryListViewController.swift */,
 				850C7B7C242034C9001B9328 /* cells */,
 			);
@@ -141,7 +139,6 @@
 		853D146624230A9900B49291 /* universities-webview */ = {
 			isa = PBXGroup;
 			children = (
-				853D14642423095F00B49291 /* major-detail-scene */,
 			);
 			path = "universities-webview";
 			sourceTree = "<group>";
@@ -291,7 +288,10 @@
 			isa = PBXGroup;
 			children = (
 				92D8E1072418C37500B7B13A /* Majors.storyboard */,
+				853D14622423093400B49291 /* category-detail-scene */,
 				850C7B7524202B86001B9328 /* category-list-scene */,
+				853D14642423095F00B49291 /* major-detail-scene */,
+				853D14632423095C00B49291 /* major-list-scene */,
 				853D146624230A9900B49291 /* universities-webview */,
 				853D14652423096300B49291 /* universities-modal */,
 			);
