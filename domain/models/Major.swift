@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct Major {
+    var id: Int
+    var name: String
+    var domain: String
+    var imageName: String
+}

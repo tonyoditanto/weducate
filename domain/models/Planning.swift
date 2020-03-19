@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+enum PlanningStatus: String {
+    case todo
+    case doing
+    case done
+}
+
+struct Planning {
+    var id: Int
+    var title: String
+    var detail: String
+    var status: PlanningStatus
+}
+
+
