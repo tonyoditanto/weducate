@@ -19,25 +19,35 @@ class PlanningAllCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
     func configureCell(With planning: Planning) {
-        titleLabel.text = planning.title
-        subtitleLabel.text = planning.detail
-        
-        switch planning.status {
+        setLabelsText(for: planning)
+        configureCellStyle(forStatus: planning.status)
+    }
+    
+    private func setLabelsText(for planning: Planning) {
+        titleLabel.attributedText = NSMutableAttributedString(string: planning.title)
+        subtitleLabel.attributedText = NSMutableAttributedString(string: planning.detail)
+    }
+    
+    private func configureCellStyle(forStatus status: PlanningStatus) {
+        switch status {
         case .todo:
             removeStrikeThorughOnTitleLabel()
             doingIndicatorView.isHidden = true
+            changeLabelsColorForActiveState()
         case .doing:
-            applyStrikeThorughOnTitleLabel()
-            doingIndicatorView.isHidden = false
-        case .done:
             removeStrikeThorughOnTitleLabel()
+            doingIndicatorView.isHidden = false
+            changeLabelsColorForActiveState()
+        case .done:
+            applyStrikeThorughOnTitleLabel()
             doingIndicatorView.isHidden = true
+            changeLabelsColorForInactiveState()
         }
     }
     
@@ -51,9 +61,18 @@ class PlanningAllCell: UITableViewCell {
     private func removeStrikeThorughOnTitleLabel() {
         guard let text = titleLabel.text else { return }
         let attributeString = NSMutableAttributedString(string: text)
-        attributeString.removeAttribute(.strikethroughStyle, range: NSMakeRange(0, attributeString.length))
+        attributeString.addAttribute(.strikethroughStyle, value: 0, range: NSMakeRange(0, attributeString.length))
         titleLabel.attributedText = attributeString
     }
     
+    private func changeLabelsColorForActiveState() {
+        titleLabel.textColor = .label
+        subtitleLabel.textColor = .secondaryLabel
+    }
+    
+    private func changeLabelsColorForInactiveState() {
+        titleLabel.textColor = .secondaryLabel
+        subtitleLabel.textColor = .tertiaryLabel
+    }
     
 }

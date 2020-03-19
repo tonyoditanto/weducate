@@ -17,6 +17,7 @@ enum PlanningViewControllerCellType: Int {
 
 class PlanningViewController: UITableViewController {
     var selectedSegmentIndex = 0
+    var selectedSegmentType: PlanningViewControllerCellType = .todo
     var searchTextField: UITextField?
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -98,6 +99,13 @@ class PlanningViewController: UITableViewController {
     
     @IBAction func segmentedControlDidTap(_ sender: UISegmentedControl) {
         selectedSegmentIndex = sender.selectedSegmentIndex
+        switch selectedSegmentIndex {
+        case 0: selectedSegmentType = .todo
+        case 1: selectedSegmentType = .doing
+        case 2: selectedSegmentType = .done
+        case 3: selectedSegmentType = .all
+        default: selectedSegmentType = .todo
+        }
         tableView.reloadData()
     }
     
@@ -105,49 +113,53 @@ class PlanningViewController: UITableViewController {
     // MARK: - UITableViewDataSource
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        if selectedSegmentType == .todo {
+            let todoPlannings = plannings.filter { planning -> Bool in
+                return planning.status == .todo
+            }
+            return todoPlannings.count
+        }
+        if selectedSegmentType == .doing {
+            let doingPlannings = plannings.filter { return $0.status == .doing }
+            return doingPlannings.count
+        }
+        if selectedSegmentType == .done {
+            return plannings
+                .filter { return $0.status == .done }
+                .count
+        }
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if selectedSegmentIndex == PlanningViewControllerCellType.todo.rawValue {
-            let cell = tableView.dequeueReusableCell(withIdentifier: PlanningToDoCell.cellID, for: indexPath)
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: PlanningAllCell.cellID, for: indexPath) as! PlanningAllCell
+        var status: PlanningStatus = .todo
+        if selectedSegmentType == .todo {
+            status = .todo
         }
-        if selectedSegmentIndex == PlanningViewControllerCellType.doing.rawValue {
-            let cell = tableView.dequeueReusableCell(withIdentifier: PlanningDoingCell.cellID, for: indexPath)
-            return cell
+        if selectedSegmentType == .doing {
+            status = .doing
         }
-        if selectedSegmentIndex == PlanningViewControllerCellType.done.rawValue {
-            let cell = tableView.dequeueReusableCell(withIdentifier: PlanningDoneCell.cellID, for: indexPath)
-            return cell
+        if selectedSegmentType == .done {
+            status = .done
         }
-        if selectedSegmentIndex == PlanningViewControllerCellType.all.rawValue {
-            let cell = tableView.dequeueReusableCell(withIdentifier: PlanningAllCell.cellID, for: indexPath) as! PlanningAllCell
-            let planning = plannings[indexPath.row]
-            cell.configureCell(With: planning)
-            return cell
-        }
-        let cell = tableView.dequeueReusableCell(withIdentifier: PlanningToDoCell.cellID, for: indexPath)
+        
+        let plannings = getPlannings(forStatus: status)
+        let planning = plannings[indexPath.row]
+        cell.configureCell(With: planning)
+       
         return cell
     }
     
+    func getPlannings(forStatus status: PlanningStatus) -> [Planning] {
+        return plannings
+            .filter { $0.status == status }
+    }
     
     // MARK: - UITableViewDelegate
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if selectedSegmentIndex == PlanningViewControllerCellType.todo.rawValue {
-            return PlanningToDoCell.cellHeight
-        }
-        if selectedSegmentIndex == PlanningViewControllerCellType.doing.rawValue {
-            return PlanningDoingCell.cellHeight
-        }
-        if selectedSegmentIndex == PlanningViewControllerCellType.done.rawValue {
-            return PlanningDoneCell.cellHeight
-        }
-        if selectedSegmentIndex == PlanningViewControllerCellType.all.rawValue {
-            return PlanningAllCell.cellHeight
-        }
-        return 0
+        return PlanningAllCell.cellHeight
     }
     
 }
