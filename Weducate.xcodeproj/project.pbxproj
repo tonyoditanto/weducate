@@ -28,6 +28,10 @@
 		927E67EC241F292700F430C4 /* MeViewControllerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E67EB241F292700F430C4 /* MeViewControllerSection.swift */; };
 		927E67EF241F2A2200F430C4 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E67EE241F2A2200F430C4 /* UIViewController+Alert.swift */; };
 		927E67F1241F303400F430C4 /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E67F0241F303400F430C4 /* SectionData.swift */; };
+		929569C32422FE0200543294 /* PlanningAllCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929569C12422FE0200543294 /* PlanningAllCell.swift */; };
+		929569C42422FE0200543294 /* PlanningAllCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929569C22422FE0200543294 /* PlanningAllCell.xib */; };
+		929569C62423013500543294 /* Planning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929569C52423013500543294 /* Planning.swift */; };
+		929569C82423014800543294 /* PlanningRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929569C72423014800543294 /* PlanningRepository.swift */; };
 		92AF7235241A31D4008ED30E /* RectangleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF7234241A31D4008ED30E /* RectangleButton.swift */; };
 		92AF7238241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AF7236241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift */; };
 		92AF7239241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92AF7237241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib */; };
@@ -90,6 +94,10 @@
 		927E67EB241F292700F430C4 /* MeViewControllerSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewControllerSection.swift; sourceTree = "<group>"; };
 		927E67EE241F2A2200F430C4 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		927E67F0241F303400F430C4 /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
+		929569C12422FE0200543294 /* PlanningAllCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningAllCell.swift; sourceTree = "<group>"; };
+		929569C22422FE0200543294 /* PlanningAllCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanningAllCell.xib; sourceTree = "<group>"; };
+		929569C52423013500543294 /* Planning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planning.swift; sourceTree = "<group>"; };
+		929569C72423014800543294 /* PlanningRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningRepository.swift; sourceTree = "<group>"; };
 		92AF7234241A31D4008ED30E /* RectangleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleButton.swift; sourceTree = "<group>"; };
 		92AF7236241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteInsightsCollectionViewCell.swift; sourceTree = "<group>"; };
 		92AF7237241A3713008ED30E /* InfiniteInsightsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfiniteInsightsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -155,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				92181102241E776000D1D476 /* MajorRepository.swift */,
+				929569C72423014800543294 /* PlanningRepository.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -210,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				921810FF241E76D300D1D476 /* Major.swift */,
+				929569C52423013500543294 /* Planning.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -241,6 +251,15 @@
 			path = planning;
 			sourceTree = "<group>";
 		};
+		929569C02422FDE600543294 /* all */ = {
+			isa = PBXGroup;
+			children = (
+				929569C12422FE0200543294 /* PlanningAllCell.swift */,
+				929569C22422FE0200543294 /* PlanningAllCell.xib */,
+			);
+			path = all;
+			sourceTree = "<group>";
+		};
 		92B30A4F2420755A00073766 /* module-planning */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +284,7 @@
 				926F36022420988500A5A561 /* todo */,
 				926F36032420988F00A5A561 /* doing */,
 				926F36042420989C00A5A561 /* planning */,
+				929569C02422FDE600543294 /* all */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -512,6 +532,7 @@
 				92D8E0EB2418C0B800B7B13A /* Assets.xcassets in Resources */,
 				921C6FAC241A82B4003A1A81 /* InfiniteInsightsCell.xib in Resources */,
 				92D8E0E62418C0B700B7B13A /* Main.storyboard in Resources */,
+				929569C42422FE0200543294 /* PlanningAllCell.xib in Resources */,
 				926F35FD242091CE00A5A561 /* PlanningDoingCell.xib in Resources */,
 				926F3601242092A100A5A561 /* PlanningDoneCell.xib in Resources */,
 				92D8E1052418C1F100B7B13A /* Highlights.storyboard in Resources */,
@@ -532,8 +553,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				929569C32422FE0200543294 /* PlanningAllCell.swift in Sources */,
 				92BF63482419F5EF00259C06 /* FeaturedDetailViewController.swift in Sources */,
+				929569C82423014800543294 /* PlanningRepository.swift in Sources */,
 				921C6FAE241A93F6003A1A81 /* TabBarController.swift in Sources */,
+				929569C62423013500543294 /* Planning.swift in Sources */,
 				92AF7235241A31D4008ED30E /* RectangleButton.swift in Sources */,
 				92D8E0DF2418C0B700B7B13A /* AppDelegate.swift in Sources */,
 				926F35F8242090B800A5A561 /* PlanningToDoCell.swift in Sources */,

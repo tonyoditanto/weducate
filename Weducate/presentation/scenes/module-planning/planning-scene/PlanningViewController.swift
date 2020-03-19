@@ -20,12 +20,21 @@ class PlanningViewController: UITableViewController {
     var searchTextField: UITextField?
     let searchController = UISearchController(searchResultsController: nil)
     
+    let repository = PlanningRepository()
+    var plannings = [Planning]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupSearchController()
         tableView.tableFooterView = UIView()
         registerCells()
+        fetchPlannings()
+    }
+    
+    func fetchPlannings() {
+        plannings = repository.fetchPlannings()
+        tableView.reloadData()
     }
     
     func setupSearchController() {
@@ -64,6 +73,7 @@ class PlanningViewController: UITableViewController {
         registerPlanningToDoCell()
         registerPlanningDoingCell()
         registerPlanninDoneCell()
+        registerPlanningAllCell()
     }
     
     func registerPlanningToDoCell() {
@@ -79,6 +89,11 @@ class PlanningViewController: UITableViewController {
     func registerPlanninDoneCell() {
         let nib = UINib(nibName: PlanningDoneCell.cellID, bundle: Bundle.main)
         tableView.register(nib, forCellReuseIdentifier: PlanningDoneCell.cellID)
+    }
+    
+    func registerPlanningAllCell() {
+        let nib = UINib(nibName: PlanningAllCell.cellID, bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: PlanningAllCell.cellID)
     }
     
     @IBAction func segmentedControlDidTap(_ sender: UISegmentedControl) {
@@ -107,7 +122,9 @@ class PlanningViewController: UITableViewController {
             return cell
         }
         if selectedSegmentIndex == PlanningViewControllerCellType.all.rawValue {
-            let cell = tableView.dequeueReusableCell(withIdentifier: PlanningDoneCell.cellID, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: PlanningAllCell.cellID, for: indexPath) as! PlanningAllCell
+            let planning = plannings[indexPath.row]
+            cell.configureCell(With: planning)
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: PlanningToDoCell.cellID, for: indexPath)
@@ -128,7 +145,7 @@ class PlanningViewController: UITableViewController {
             return PlanningDoneCell.cellHeight
         }
         if selectedSegmentIndex == PlanningViewControllerCellType.all.rawValue {
-            return PlanningDoneCell.cellHeight
+            return PlanningAllCell.cellHeight
         }
         return 0
     }
