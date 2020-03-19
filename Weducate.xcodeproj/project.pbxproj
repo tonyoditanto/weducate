@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850C7B7B242034BB001B9328 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C7B7A242034BB001B9328 /* CategoryListViewController.swift */; };
+		850C7B7E24203507001B9328 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C7B7D24203507001B9328 /* CategoryTableViewCell.swift */; };
+		850C7B80242037EA001B9328 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C7B7F242037EA001B9328 /* Category.swift */; };
 		920B3F9C241A498B00E7E798 /* HighlightsViewControllerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920B3F9B241A498B00E7E798 /* HighlightsViewControllerSection.swift */; };
 		920B3FA0241A4C9700E7E798 /* DiscoverYouViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920B3F9E241A4C9700E7E798 /* DiscoverYouViewCell.swift */; };
 		920B3FA1241A4C9700E7E798 /* DiscoverYouViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920B3F9F241A4C9700E7E798 /* DiscoverYouViewCell.xib */; };
@@ -33,9 +36,6 @@
 		92B30A532420870E00073766 /* RoundableCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B30A522420870E00073766 /* RoundableCornerView.swift */; };
 		92B30A5624208BE800073766 /* PlanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B30A5524208BE800073766 /* PlanningViewController.swift */; };
 		92BD4F24241A287E001B3A48 /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BD4F23241A287E001B3A48 /* UIViewController+Child.swift */; };
-		850C7B7B242034BB001B9328 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C7B7A242034BB001B9328 /* CategoryListViewController.swift */; };
-		850C7B7E24203507001B9328 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C7B7D24203507001B9328 /* CategoryTableViewCell.swift */; };
-		850C7B80242037EA001B9328 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850C7B7F242037EA001B9328 /* Category.swift */; };
 		92BF63482419F5EF00259C06 /* FeaturedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */; };
 		92D67C31241902A300B620FD /* HighlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D67C30241902A300B620FD /* HighlightsViewController.swift */; };
 		92D67C3C241914A000B620FD /* HighlightsFeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D67C3A241914A000B620FD /* HighlightsFeaturedCell.swift */; };
@@ -70,6 +70,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		850C7B7A242034BB001B9328 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
+		850C7B7D24203507001B9328 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		850C7B7F242037EA001B9328 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		920B3F9B241A498B00E7E798 /* HighlightsViewControllerSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsViewControllerSection.swift; sourceTree = "<group>"; };
 		920B3F9E241A4C9700E7E798 /* DiscoverYouViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverYouViewCell.swift; sourceTree = "<group>"; };
 		920B3F9F241A4C9700E7E798 /* DiscoverYouViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiscoverYouViewCell.xib; sourceTree = "<group>"; };
@@ -96,9 +99,6 @@
 		92B30A522420870E00073766 /* RoundableCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableCornerView.swift; sourceTree = "<group>"; };
 		92B30A5524208BE800073766 /* PlanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningViewController.swift; sourceTree = "<group>"; };
 		92BD4F23241A287E001B3A48 /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
-		850C7B7A242034BB001B9328 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
-		850C7B7D24203507001B9328 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
-		850C7B7F242037EA001B9328 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		92BF63472419F5EF00259C06 /* FeaturedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedDetailViewController.swift; sourceTree = "<group>"; };
 		92D67C30241902A300B620FD /* HighlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsViewController.swift; sourceTree = "<group>"; };
 		92D67C3A241914A000B620FD /* HighlightsFeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsFeaturedCell.swift; sourceTree = "<group>"; };
@@ -144,24 +144,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		920B3F9D241A4C6B00E7E798 /* discover-you */ = {
-			isa = PBXGroup;
-			children = (
-				920B3F9E241A4C9700E7E798 /* DiscoverYouViewCell.swift */,
-				920B3F9F241A4C9700E7E798 /* DiscoverYouViewCell.xib */,
-			);
-			path = "discover-you";
-			sourceTree = "<group>";
-		};
-		92181101241E773300D1D476 /* data */ = {
-			isa = PBXGroup;
-			children = (
-				92181102241E776000D1D476 /* MajorRepository.swift */,
-				929569C72423014800543294 /* PlanningRepository.swift */,
-			);
-			path = data;
-			sourceTree = "<group>";
-		};
 		850C7B7524202B86001B9328 /* category-list-scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +195,24 @@
 			children = (
 			);
 			path = "universities-webview";
+			sourceTree = "<group>";
+		};
+		920B3F9D241A4C6B00E7E798 /* discover-you */ = {
+			isa = PBXGroup;
+			children = (
+				920B3F9E241A4C9700E7E798 /* DiscoverYouViewCell.swift */,
+				920B3F9F241A4C9700E7E798 /* DiscoverYouViewCell.xib */,
+			);
+			path = "discover-you";
+			sourceTree = "<group>";
+		};
+		92181101241E773300D1D476 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				92181102241E776000D1D476 /* MajorRepository.swift */,
+				929569C72423014800543294 /* PlanningRepository.swift */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 		925AFA092418F42100C33ACC /* application */ = {
