@@ -128,24 +128,29 @@ class PlanningViewController: UITableViewController {
                 .filter { return $0.status == .done }
                 .count
         }
+        if selectedSegmentType == .all {
+            return plannings.count
+        }
         return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PlanningAllCell.cellID, for: indexPath) as! PlanningAllCell
-        var status: PlanningStatus = .todo
+        var filteredPlannings = [Planning]()
         if selectedSegmentType == .todo {
-            status = .todo
+            filteredPlannings = getPlannings(forStatus: .todo)
         }
         if selectedSegmentType == .doing {
-            status = .doing
+            filteredPlannings = getPlannings(forStatus: .doing)
         }
         if selectedSegmentType == .done {
-            status = .done
+            filteredPlannings = getPlannings(forStatus: .done)
+        }
+        if selectedSegmentType == .all {
+            filteredPlannings = plannings
         }
         
-        let plannings = getPlannings(forStatus: status)
-        let planning = plannings[indexPath.row]
+        let planning = filteredPlannings[indexPath.row]
         cell.configureCell(With: planning)
        
         return cell
