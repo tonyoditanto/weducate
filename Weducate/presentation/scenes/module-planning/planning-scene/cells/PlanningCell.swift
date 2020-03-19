@@ -1,5 +1,5 @@
 //
-//  PlanningAllCell.swift
+//  PlanningCell.swift
 //  Weducate
 //
 //  Created by Arifin Firdaus on 19/03/20.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class PlanningAllCell: UITableViewCell {
+class PlanningCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var doingIndicatorView: RoundableCornerImageView!
     
-    static let cellID = "PlanningAllCell"
+    static let cellID = "PlanningCell"
     static let cellHeight: CGFloat = 72
     
     override func awakeFromNib() {

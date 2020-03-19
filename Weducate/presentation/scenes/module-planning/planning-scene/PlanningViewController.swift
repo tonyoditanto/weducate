@@ -29,7 +29,7 @@ class PlanningViewController: UITableViewController {
         
         setupSearchController()
         tableView.tableFooterView = UIView()
-        registerCells()
+        registerPlanningCell()
         fetchPlannings()
     }
     
@@ -70,31 +70,9 @@ class PlanningViewController: UITableViewController {
         return alertController
     }
     
-    func registerCells() {
-        registerPlanningToDoCell()
-        registerPlanningDoingCell()
-        registerPlanninDoneCell()
-        registerPlanningAllCell()
-    }
-    
-    func registerPlanningToDoCell() {
-        let nib = UINib(nibName: PlanningToDoCell.cellID, bundle: Bundle.main)
-        tableView.register(nib, forCellReuseIdentifier: PlanningToDoCell.cellID)
-    }
-    
-    func registerPlanningDoingCell() {
-        let nib = UINib(nibName: PlanningDoingCell.cellID, bundle: Bundle.main)
-        tableView.register(nib, forCellReuseIdentifier: PlanningDoingCell.cellID)
-    }
-    
-    func registerPlanninDoneCell() {
-        let nib = UINib(nibName: PlanningDoneCell.cellID, bundle: Bundle.main)
-        tableView.register(nib, forCellReuseIdentifier: PlanningDoneCell.cellID)
-    }
-    
-    func registerPlanningAllCell() {
-        let nib = UINib(nibName: PlanningAllCell.cellID, bundle: Bundle.main)
-        tableView.register(nib, forCellReuseIdentifier: PlanningAllCell.cellID)
+    func registerPlanningCell() {
+        let nib = UINib(nibName: PlanningCell.cellID, bundle: Bundle.main)
+        tableView.register(nib, forCellReuseIdentifier: PlanningCell.cellID)
     }
     
     @IBAction func segmentedControlDidTap(_ sender: UISegmentedControl) {
@@ -135,7 +113,7 @@ class PlanningViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PlanningAllCell.cellID, for: indexPath) as! PlanningAllCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: PlanningCell.cellID, for: indexPath) as! PlanningCell
         var filteredPlannings = [Planning]()
         if selectedSegmentType == .todo {
             filteredPlannings = getPlannings(forStatus: .todo)
@@ -152,7 +130,7 @@ class PlanningViewController: UITableViewController {
         
         let planning = filteredPlannings[indexPath.row]
         cell.configureCell(With: planning)
-       
+        
         return cell
     }
     
@@ -164,7 +142,7 @@ class PlanningViewController: UITableViewController {
     // MARK: - UITableViewDelegate
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return PlanningAllCell.cellHeight
+        return PlanningCell.cellHeight
     }
     
 }
