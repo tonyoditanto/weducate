@@ -68,6 +68,11 @@ extension CategoryListViewController: UITableViewDataSource, UITableViewDelegate
         cell.setCategory(category: category)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }
 
 extension CategoryListViewController: UISearchResultsUpdating {
