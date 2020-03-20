@@ -22,12 +22,14 @@
 		921C6FB0241A945B003A1A81 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921C6FAF241A945B003A1A81 /* NavigationController.swift */; };
 		922DD931242371E500D2EFB6 /* Planning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922DD930242371E500D2EFB6 /* Planning.swift */; };
 		922DD933242371F300D2EFB6 /* Major.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922DD932242371F300D2EFB6 /* Major.swift */; };
+		9263FE0E24246675001653DD /* EditPlanningStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9263FE0D24246675001653DD /* EditPlanningStatusViewController.swift */; };
 		927A8869241E6417001CCD53 /* RoundableCornerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A8868241E6417001CCD53 /* RoundableCornerImageView.swift */; };
 		927A886B241E6593001CCD53 /* FeaturedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927A886A241E6593001CCD53 /* FeaturedCardView.swift */; };
 		927E67EA241F28A600F430C4 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E67E9241F28A600F430C4 /* MeViewController.swift */; };
 		927E67EC241F292700F430C4 /* MeViewControllerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E67EB241F292700F430C4 /* MeViewControllerSection.swift */; };
 		927E67EF241F2A2200F430C4 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E67EE241F2A2200F430C4 /* UIViewController+Alert.swift */; };
 		927E67F1241F303400F430C4 /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927E67F0241F303400F430C4 /* SectionData.swift */; };
+		92805CB92424569600C86347 /* EditPlanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92805CB82424569600C86347 /* EditPlanningViewController.swift */; };
 		929569C32422FE0200543294 /* PlanningCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929569C12422FE0200543294 /* PlanningCell.swift */; };
 		929569C42422FE0200543294 /* PlanningCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 929569C22422FE0200543294 /* PlanningCell.xib */; };
 		929569C82423014800543294 /* PlanningRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929569C72423014800543294 /* PlanningRepository.swift */; };
@@ -87,12 +89,14 @@
 		921C6FAF241A945B003A1A81 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		922DD930242371E500D2EFB6 /* Planning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Planning.swift; path = domain/models/Planning.swift; sourceTree = SOURCE_ROOT; };
 		922DD932242371F300D2EFB6 /* Major.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Major.swift; path = domain/models/Major.swift; sourceTree = SOURCE_ROOT; };
+		9263FE0D24246675001653DD /* EditPlanningStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlanningStatusViewController.swift; sourceTree = "<group>"; };
 		927A8868241E6417001CCD53 /* RoundableCornerImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundableCornerImageView.swift; sourceTree = "<group>"; };
 		927A886A241E6593001CCD53 /* FeaturedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCardView.swift; sourceTree = "<group>"; };
 		927E67E9241F28A600F430C4 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		927E67EB241F292700F430C4 /* MeViewControllerSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewControllerSection.swift; sourceTree = "<group>"; };
 		927E67EE241F2A2200F430C4 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		927E67F0241F303400F430C4 /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
+		92805CB82424569600C86347 /* EditPlanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlanningViewController.swift; sourceTree = "<group>"; };
 		929569C12422FE0200543294 /* PlanningCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningCell.swift; sourceTree = "<group>"; };
 		929569C22422FE0200543294 /* PlanningCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanningCell.xib; sourceTree = "<group>"; };
 		929569C72423014800543294 /* PlanningRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanningRepository.swift; sourceTree = "<group>"; };
@@ -303,11 +307,29 @@
 			path = ../domain;
 			sourceTree = "<group>";
 		};
+		9263FE0C242464FB001653DD /* edit-planning-status-scene */ = {
+			isa = PBXGroup;
+			children = (
+				9263FE0D24246675001653DD /* EditPlanningStatusViewController.swift */,
+			);
+			path = "edit-planning-status-scene";
+			sourceTree = "<group>";
+		};
+		92805CB72424566A00C86347 /* edit-planning-scene */ = {
+			isa = PBXGroup;
+			children = (
+				92805CB82424569600C86347 /* EditPlanningViewController.swift */,
+			);
+			path = "edit-planning-scene";
+			sourceTree = "<group>";
+		};
 		92B30A4F2420755A00073766 /* module-planning */ = {
 			isa = PBXGroup;
 			children = (
 				92B30A502420757200073766 /* Planning.storyboard */,
 				92B30A5424208BD200073766 /* planning-scene */,
+				92805CB72424566A00C86347 /* edit-planning-scene */,
+				9263FE0C242464FB001653DD /* edit-planning-status-scene */,
 			);
 			path = "module-planning";
 			sourceTree = "<group>";
@@ -604,6 +626,7 @@
 				929569C82423014800543294 /* PlanningRepository.swift in Sources */,
 				921C6FAE241A93F6003A1A81 /* TabBarController.swift in Sources */,
 				92AF7235241A31D4008ED30E /* RectangleButton.swift in Sources */,
+				92805CB92424569600C86347 /* EditPlanningViewController.swift in Sources */,
 				922DD931242371E500D2EFB6 /* Planning.swift in Sources */,
 				92D8E0DF2418C0B700B7B13A /* AppDelegate.swift in Sources */,
 				921C6FAB241A82B4003A1A81 /* InfiniteInsightsCell.swift in Sources */,
@@ -632,6 +655,7 @@
 				92D67C31241902A300B620FD /* HighlightsViewController.swift in Sources */,
 				927E67F1241F303400F430C4 /* SectionData.swift in Sources */,
 				850C7B80242037EA001B9328 /* Category.swift in Sources */,
+				9263FE0E24246675001653DD /* EditPlanningStatusViewController.swift in Sources */,
 				922DD933242371F300D2EFB6 /* Major.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

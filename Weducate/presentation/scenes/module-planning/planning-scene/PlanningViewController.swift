@@ -145,6 +145,19 @@ class PlanningViewController: UITableViewController {
         return PlanningCell.cellHeight
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let planning = plannings[indexPath.row]
+        let viewController = makeEditPlanningViewController()
+        viewController.planning = planning
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func makeEditPlanningViewController() -> EditPlanningViewController {
+        let storyboard = UIStoryboard(name: "Planning", bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(identifier: "EditPlanningViewController") as! EditPlanningViewController
+        return viewController
+    }
+    
 }
 
 
