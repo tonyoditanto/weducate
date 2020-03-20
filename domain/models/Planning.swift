@@ -20,3 +20,5 @@ struct Planning {
     var detail: String
     var status: PlanningStatus
 }
+
+

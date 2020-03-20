@@ -51,7 +51,6 @@ class HighlightsMajorsCell: UITableViewCell {
     
 }
 
-
 // MARK: - UICollectionViewDataSource
 
 extension HighlightsMajorsCell: UICollectionViewDataSource {
@@ -69,8 +68,6 @@ extension HighlightsMajorsCell: UICollectionViewDataSource {
     }
     
 }
-
-
 // MARK: - UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
 
 extension HighlightsMajorsCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
