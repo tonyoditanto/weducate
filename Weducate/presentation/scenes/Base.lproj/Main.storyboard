@@ -9,7 +9,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="25d-O2-x7G">
             <objects>
-                <tabBarController id="pbr-A0-LkP" sceneMemberID="viewController">
+                <tabBarController id="pbr-A0-LkP" customClass="TabBarController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vel-tt-1p0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -30,7 +30,7 @@
         <scene sceneID="plw-Rx-KNK">
             <objects>
                 <viewControllerPlaceholder storyboardName="Highlights" id="X0T-Uj-Xh6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2Cn-Sk-yRM"/>
+                    <tabBarItem key="tabBarItem" selectedImage="square.stack.3d.up.fill" catalog="system" id="2Cn-Sk-yRM"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jTr-hp-x6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,4 +67,7 @@
             <point key="canvasLocation" x="198" y="587"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="square.stack.3d.up.fill" catalog="system" width="64" height="62"/>
+    </resources>
 </document>

@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol HighlightsFeaturedCellDelegate {
+    func highlightsFeaturedCell(_ highlightsFeaturedCell: HighlightsFeaturedCell, collectionView: UICollectionView, didSelect at: IndexPath)
+}
+
 class HighlightsFeaturedCell: UITableViewCell {
     static let cellID = "HighlightsFeaturedCell"
     static let cellHeight: CGFloat = 432
 
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var delegate: HighlightsFeaturedCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +29,7 @@ class HighlightsFeaturedCell: UITableViewCell {
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.isPagingEnabled = true
         
         registerCollectionViewCell()
         setupCollectionViewScrollDirection()
@@ -67,10 +74,28 @@ extension HighlightsFeaturedCell: UICollectionViewDataSource {
 extension HighlightsFeaturedCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width
+        let width = (collectionView.frame.width) - (collectionView.frame.width * 1 / 8)
         let height: CGFloat = 400
         
         return CGSize(width: width, height: height)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.highlightsFeaturedCell(self, collectionView: collectionView, didSelect: indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
+    }
+
 }
+
 

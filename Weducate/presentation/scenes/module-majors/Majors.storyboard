@@ -10,14 +10,75 @@
         <!--Majors-->
         <scene sceneID="ofX-kD-ARm">
             <objects>
-                <viewController id="6b6-gv-JY7" customClass="ViewController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6b6-gv-JY7" customClass="CategoryListViewController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fxu-38-vkY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E9B-aZ-U1W">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CategoryTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryTableViewCell" id="gz0-TB-VwK" customClass="CategoryTableViewCell" customModule="Weducate" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="46.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gz0-TB-VwK" id="0Sp-ex-df2">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="46.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X3q-Cx-Bym">
+                                                    <rect key="frame" x="16" y="8" width="32" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="X3q-Cx-Bym" secondAttribute="height" multiplier="28:25" id="Dty-0W-BC4"/>
+                                                        <constraint firstAttribute="width" constant="32" id="mcz-lj-nZx"/>
+                                                        <constraint firstAttribute="height" constant="25" id="nRE-xC-EkQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miw-Yc-Szk">
+                                                    <rect key="frame" x="60" y="11" width="322" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="Y5U-ml-2Nh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="X3q-Cx-Bym" secondAttribute="bottom" constant="9.5" id="Itx-zh-28Y"/>
+                                                <constraint firstItem="miw-Yc-Szk" firstAttribute="centerY" secondItem="0Sp-ex-df2" secondAttribute="centerY" id="O6Y-7N-mpu"/>
+                                                <constraint firstItem="miw-Yc-Szk" firstAttribute="leading" secondItem="X3q-Cx-Bym" secondAttribute="trailing" constant="12" id="S7H-XK-aTX"/>
+                                                <constraint firstItem="X3q-Cx-Bym" firstAttribute="leading" secondItem="0Sp-ex-df2" secondAttribute="leading" constant="16" id="bAY-RM-eWw"/>
+                                                <constraint firstAttribute="trailing" secondItem="X3q-Cx-Bym" secondAttribute="trailing" constant="366" id="qBw-sJ-EB9"/>
+                                                <constraint firstItem="X3q-Cx-Bym" firstAttribute="top" secondItem="0Sp-ex-df2" secondAttribute="top" constant="8" id="vau-rN-hLy"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="miw-Yc-Szk" secondAttribute="trailing" constant="12" id="veA-Uc-hTg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="CategoryImageView" destination="X3q-Cx-Bym" id="RFv-r2-WWO"/>
+                                            <outlet property="CategoryNameLabel" destination="miw-Yc-Szk" id="X9a-6O-cjL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6b6-gv-JY7" id="uxo-kI-5Nn"/>
+                                    <outlet property="delegate" destination="6b6-gv-JY7" id="Rhh-ij-PgN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ymY-JD-Ncc" firstAttribute="bottom" secondItem="E9B-aZ-U1W" secondAttribute="bottom" id="J6S-lU-6br"/>
+                            <constraint firstItem="ymY-JD-Ncc" firstAttribute="trailing" secondItem="E9B-aZ-U1W" secondAttribute="trailing" id="OWZ-1o-R42"/>
+                            <constraint firstItem="E9B-aZ-U1W" firstAttribute="top" secondItem="ymY-JD-Ncc" secondAttribute="top" id="sKU-lB-bTh"/>
+                            <constraint firstItem="E9B-aZ-U1W" firstAttribute="leading" secondItem="ymY-JD-Ncc" secondAttribute="leading" id="yCC-iP-812"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ymY-JD-Ncc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Majors" id="vhy-fV-gqs"/>
+                    <navigationItem key="navigationItem" title="Majors" largeTitleDisplayMode="always" id="vhy-fV-gqs"/>
+                    <connections>
+                        <outlet property="CategoryTableView" destination="E9B-aZ-U1W" id="Mc0-5T-tXI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brf-CI-PH8" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,10 +88,10 @@
         <scene sceneID="amD-i7-4pq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8kf-CY-GzS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Majors" id="FNy-nK-rbP"/>
+                    <tabBarItem key="tabBarItem" title="Majors" image="doc.text.magnifyingglass" catalog="system" selectedImage="doc.text.magnifyingglass" id="FNy-nK-rbP"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YqA-mC-VhL">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="YqA-mC-VhL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -43,4 +104,7 @@
             <point key="canvasLocation" x="308.69565217391306" y="428.57142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="doc.text.magnifyingglass" catalog="system" width="58" height="64"/>
+    </resources>
 </document>

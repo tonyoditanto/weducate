@@ -14,9 +14,10 @@ class HighlightsMajorsCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    private var majors = [Major]()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         setupCollectionView()
     }
     
@@ -43,6 +44,11 @@ class HighlightsMajorsCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func configureCell(with majors: [Major]) {
+        self.majors = majors
+        collectionView.reloadData()
+    }
+    
 }
 
 // MARK: - UICollectionViewDataSource
@@ -50,11 +56,14 @@ class HighlightsMajorsCell: UITableViewCell {
 extension HighlightsMajorsCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return majors.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HighlightsMajorCollectionViewCell.cellID, for: indexPath) as! HighlightsMajorCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HighlightsMajorCollectionViewCell.cellID, for: indexPath) as!
+        HighlightsMajorCollectionViewCell
+        let major = majors[indexPath.row]
+        cell.configureCell(with: major)
         return cell
     }
     
@@ -64,11 +73,24 @@ extension HighlightsMajorsCell: UICollectionViewDataSource {
 extension HighlightsMajorsCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width
-        let height: CGFloat = 200
+        let width = (collectionView.frame.width) - (collectionView.frame.width) * 1 / 8
+        let height: CGFloat = HighlightsMajorCollectionViewCell.cellHeight
         
         return CGSize(width: width, height: height)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
+    }
+
 }
 
 
