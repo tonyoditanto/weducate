@@ -257,7 +257,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="3vT-o3-2Yh" kind="show" id="58W-yf-JyP"/>
+                                            <segue destination="Gdq-RE-tRe" kind="show" id="BhC-z1-rnk"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -272,22 +272,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwk-aP-Zvr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="883"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ZdI-GH-U0p">
-            <objects>
-                <viewController id="3vT-o3-2Yh" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Amf-sx-TJX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="WOi-1s-uZs"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MAR-rS-z0S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1846" y="883"/>
+            <point key="canvasLocation" x="1196" y="883"/>
         </scene>
         <!--Plannings-->
         <scene sceneID="yE0-zw-zng">
@@ -478,6 +463,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AYV-Nb-TcP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="285.50724637681162" y="106.47321428571428"/>
+        </scene>
+        <!--Edit Planning Status View Controller-->
+        <scene sceneID="Eg5-h8-DUZ">
+            <objects>
+                <tableViewController id="Gdq-RE-tRe" customClass="EditPlanningStatusViewController" customModule="Weducate" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BT4-Yy-4cp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="s70-Hz-d1i" style="IBUITableViewCellStyleDefault" id="all-4O-PGm">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="all-4O-PGm" id="10e-dE-SB4">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s70-Hz-d1i">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Gdq-RE-tRe" id="YXT-ry-AHy"/>
+                            <outlet property="delegate" destination="Gdq-RE-tRe" id="Tdj-fe-qaM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="8Kn-p5-pui"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xrz-kG-FyB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1919" y="883"/>
         </scene>
     </scenes>
     <resources>
