@@ -12,7 +12,10 @@ class HighlightsFeaturedCollectionViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        layer.borderColor = UIColor.secondarySystemFill.cgColor
+        layer.borderWidth = 0.5
+        layer.cornerRadius = 4
     }
 
 }

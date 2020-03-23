@@ -14,7 +14,7 @@ protocol HighlightsFeaturedCellDelegate {
 
 class HighlightsFeaturedCell: UITableViewCell {
     static let cellID = "HighlightsFeaturedCell"
-    static let cellHeight: CGFloat = 432
+    static let cellHeight: CGFloat = 416
 
     @IBOutlet weak var collectionView: UICollectionView!
     
