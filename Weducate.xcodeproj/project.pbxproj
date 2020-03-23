@@ -14,6 +14,9 @@
 		853D1471242455FB00B49291 /* CategoryDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853D1470242455FB00B49291 /* CategoryDetail.storyboard */; };
 		853D14732424637C00B49291 /* MajorList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853D14722424637C00B49291 /* MajorList.storyboard */; };
 		853D14752424639E00B49291 /* MajorDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 853D14742424639E00B49291 /* MajorDetail.storyboard */; };
+		855B8A922428D54E00DA2409 /* HeaderCategoryDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B8A902428D54E00DA2409 /* HeaderCategoryDetailViewCell.swift */; };
+		855B8A932428D54E00DA2409 /* HeaderCategoryDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 855B8A912428D54E00DA2409 /* HeaderCategoryDetailViewCell.xib */; };
+		855B8A972428E63E00DA2409 /* CategoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855B8A962428E63E00DA2409 /* CategoryDetailViewController.swift */; };
 		85C76F9A2424EEBF00C37F65 /* CategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C76F992424EEBF00C37F65 /* CategoryRepository.swift */; };
 		85C76F9E24254DF500C37F65 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C76F9D24254DF500C37F65 /* Category.swift */; };
 		920B3F9C241A498B00E7E798 /* HighlightsViewControllerSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920B3F9B241A498B00E7E798 /* HighlightsViewControllerSection.swift */; };
@@ -83,6 +86,9 @@
 		853D1470242455FB00B49291 /* CategoryDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CategoryDetail.storyboard; sourceTree = "<group>"; };
 		853D14722424637C00B49291 /* MajorList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MajorList.storyboard; sourceTree = "<group>"; };
 		853D14742424639E00B49291 /* MajorDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MajorDetail.storyboard; sourceTree = "<group>"; };
+		855B8A902428D54E00DA2409 /* HeaderCategoryDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCategoryDetailViewCell.swift; sourceTree = "<group>"; };
+		855B8A912428D54E00DA2409 /* HeaderCategoryDetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCategoryDetailViewCell.xib; sourceTree = "<group>"; };
+		855B8A962428E63E00DA2409 /* CategoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailViewController.swift; sourceTree = "<group>"; };
 		85C76F992424EEBF00C37F65 /* CategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepository.swift; sourceTree = "<group>"; };
 		85C76F9D24254DF500C37F65 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Category.swift; path = domain/models/Category.swift; sourceTree = SOURCE_ROOT; };
 		920B3F9B241A498B00E7E798 /* HighlightsViewControllerSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightsViewControllerSection.swift; sourceTree = "<group>"; };
@@ -202,6 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				853D1470242455FB00B49291 /* CategoryDetail.storyboard */,
+				855B8A962428E63E00DA2409 /* CategoryDetailViewController.swift */,
+				85C76F9F2425648E00C37F65 /* cells */,
 			);
 			path = "category-detail-scene";
 			sourceTree = "<group>";
@@ -234,6 +242,39 @@
 			children = (
 			);
 			path = "universities-webview";
+			sourceTree = "<group>";
+		};
+		85C76F9F2425648E00C37F65 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				85C76FA0242564C800C37F65 /* header */,
+				85C76FA12425652600C37F65 /* preview */,
+				85C76FA22425654100C37F65 /* related-major */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		85C76FA0242564C800C37F65 /* header */ = {
+			isa = PBXGroup;
+			children = (
+				855B8A902428D54E00DA2409 /* HeaderCategoryDetailViewCell.swift */,
+				855B8A912428D54E00DA2409 /* HeaderCategoryDetailViewCell.xib */,
+			);
+			path = header;
+			sourceTree = "<group>";
+		};
+		85C76FA12425652600C37F65 /* preview */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = preview;
+			sourceTree = "<group>";
+		};
+		85C76FA22425654100C37F65 /* related-major */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "related-major";
 			sourceTree = "<group>";
 		};
 		920B3F9D241A4C6B00E7E798 /* discover-you */ = {
@@ -577,6 +618,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				855B8A932428D54E00DA2409 /* HeaderCategoryDetailViewCell.xib in Resources */,
 				0F2B61EC241A32B40060D117 /* Assesment.storyboard in Resources */,
 				92D67C4924191D0300B620FD /* HighlightsMajorCollectionViewCell.xib in Resources */,
 				853D14752424639E00B49291 /* MajorDetail.storyboard in Resources */,
@@ -618,6 +660,7 @@
 				92BF63482419F5EF00259C06 /* FeaturedDetailViewController.swift in Sources */,
 				929569C82423014800543294 /* PlanningRepository.swift in Sources */,
 				921C6FAE241A93F6003A1A81 /* TabBarController.swift in Sources */,
+				855B8A972428E63E00DA2409 /* CategoryDetailViewController.swift in Sources */,
 				92AF7235241A31D4008ED30E /* RectangleButton.swift in Sources */,
 				922DD931242371E500D2EFB6 /* Planning.swift in Sources */,
 				92D8E0DF2418C0B700B7B13A /* AppDelegate.swift in Sources */,
@@ -625,6 +668,7 @@
 				927E67EF241F2A2200F430C4 /* UIViewController+Alert.swift in Sources */,
 				921C6FB0241A945B003A1A81 /* NavigationController.swift in Sources */,
 				0F7EBDE32423233A00EA1575 /* AssesmentViewController.swift in Sources */,
+				855B8A922428D54E00DA2409 /* HeaderCategoryDetailViewCell.swift in Sources */,
 				92D67C402419184E00B620FD /* HighlightsFeaturedCollectionViewCell.swift in Sources */,
 				92AF7238241A3713008ED30E /* InfiniteInsightsCollectionViewCell.swift in Sources */,
 				92D67C3C241914A000B620FD /* HighlightsFeaturedCell.swift in Sources */,

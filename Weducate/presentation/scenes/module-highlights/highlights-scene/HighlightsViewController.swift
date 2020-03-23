@@ -204,7 +204,6 @@ extension HighlightsViewController {
         viewController.majorNameText = "Interior Design"
         navigationController?.pushViewController(viewController, animated: true)
     }
-    
 }
 
 
