@@ -25,6 +25,8 @@ class HighlightsMajorsCell: UITableViewCell {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isPagingEnabled = true
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
         registerCollectionViewCell()
         setupCollectionViewScrollDirection()
     }

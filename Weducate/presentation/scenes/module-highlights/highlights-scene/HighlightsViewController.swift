@@ -69,7 +69,7 @@ class HighlightsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == HighlightsViewControllerSection.SECTION_FEATURED {
-            return 400
+            return HighlightsFeaturedCell.cellHeight
         }
         if indexPath.section == HighlightsViewControllerSection.SECTION_MAJORS {
             return 234
